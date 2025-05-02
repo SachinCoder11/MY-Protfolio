@@ -17,7 +17,7 @@ const About: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 p-8 shadow-lg">
             <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-              I am a BCA student currently in my second year at Baklewal Foundation. I am passionate about front-end development and love building clean, user-friendly, and visually appealing web experiences. I continuously explore new technologies and aim to design immersive interfaces.
+              I am a BCA student currently in my second year at Bakliwal Foundation. I am passionate about front-end development and love building clean, user-friendly, and visually appealing web experiences. I continuously explore new technologies and aim to design immersive interfaces.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">

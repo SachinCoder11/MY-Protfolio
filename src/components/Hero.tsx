@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
                 <span className="relative">Get in Touch</span>
               </a>
               <a 
-                href="file:///C:/Users/ADMIN/Downloads/Blue%20Neutral%20Simple%20Minimalist%20Professional%20Web%20Developer%20Resume.pdf" 
+                href="https://github.com/SachinCoder11/Resume-/blob/main/README.md" 
                 className="group relative px-8 py-4 font-medium border border-slate-700 text-white rounded-xl hover:border-cyan-500/50 transition-all overflow-hidden"
               >
                 <span className="absolute inset-0 w-0 bg-gradient-to-r from-cyan-500/10 to-purple-600/10 group-hover:w-full transition-all duration-300"></span>

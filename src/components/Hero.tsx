@@ -57,11 +57,11 @@ const Hero: React.FC = () => {
               </a>
             </div>
             
-            <div className="pt-8 space-y-3">
+{/*             <div className="pt-8 space-y-3">
               <div className="flex items-center justify-center md:justify-start gap-3 text-slate-400 hover:text-cyan-400 transition-colors">
                 <Phone size={16} className="animate-bounce" />
                 <span>+91-8855077289</span>
-              </div>
+              </div> */}
               <div className="flex items-center justify-center md:justify-start gap-3 text-slate-400 hover:text-cyan-400 transition-colors">
                 <Mail size={16} className="animate-bounce animation-delay-200" />
                 <span>sdineshdumbre@gmail.com</span>

@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
             <div className="h-12 md:h-14">
               <TypewriterEffect 
                 texts={[
-                  "Aspiring Front-End Develope",
+                  "Aspiring Front-End Developer",
                   "UI/UX Enthusiast", 
                   "Aspiring React Developer",
                   "Web Designer"

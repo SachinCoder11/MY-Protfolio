@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import GithubContributions from './components/GithubContributions';
 import ProjectsSection from './components/ProjectsSection';
 import DemosSection from './components/DemosSection';
 import SkillsSection from './components/SkillsSection';
@@ -27,7 +28,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800 font-sans selection:bg-blue-600 selection:text-white">
+    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800 font-sans selection:bg-emerald-600 selection:text-white">
       {/* Navigation */}
       <Navbar 
         activeSection={activeSection} 
@@ -41,6 +42,9 @@ export default function App() {
           onExploreDemos={handleExploreDemos} 
           onOpenChatbot={() => setIsChatbotOpen(true)} 
         />
+
+        {/* GitHub Green Contribution Pulse */}
+        <GithubContributions />
         
         <ProjectsSection 
           onSelectDemo={handleSelectDemo} 

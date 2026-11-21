@@ -10,7 +10,8 @@ import {
   Truck, 
   RefreshCw,
   Search,
-  Filter
+  Filter,
+  BarChart2
 } from 'lucide-react';
 
 export default function TradeDemo() {
@@ -55,13 +56,13 @@ export default function TradeDemo() {
       <div className="bg-slate-900 text-white p-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse" />
-            <span className="text-xs font-mono uppercase tracking-widest text-amber-400 font-semibold">
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-semibold">
               EXECUTIVE DATA RECONCILIATION
             </span>
           </div>
           <h3 className="text-2xl font-bold mt-1 text-white flex items-center gap-2">
-            <TrendingUp className="w-6 h-6 text-amber-400" />
+            <TrendingUp className="w-6 h-6 text-emerald-400" />
             <span>Global Trade Analytics & Data Intelligence</span>
           </h3>
           <p className="text-xs sm:text-sm text-slate-300 mt-1">
@@ -97,17 +98,17 @@ export default function TradeDemo() {
             )}
             {!showPreAuditBug && (
               <span className="text-[11px] text-emerald-600 font-semibold block mt-0.5">
-                100% Reconciled Volume
+                ✓ 100% Reconciled Volume
               </span>
             )}
           </div>
 
-          <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
-            <span className="text-xs text-slate-500 font-medium block">Operating Profit</span>
-            <div className="text-2xl font-extrabold text-slate-900 font-mono mt-0.5">
+          <div className="bg-emerald-50/60 p-4 rounded-xl border border-emerald-200">
+            <span className="text-xs text-emerald-800 font-medium block">Operating Profit</span>
+            <div className="text-2xl font-extrabold text-emerald-700 font-mono mt-0.5">
               ${showPreAuditBug ? "109,622.28" : kpis.operatingProfit.toLocaleString('en-US', { minimumFractionDigits: 2 })}
             </div>
-            <span className="text-[11px] text-slate-400 block mt-0.5">Weighted Operating Margin: 28.14%</span>
+            <span className="text-[11px] text-emerald-600 font-medium block mt-0.5">Weighted Margin: 28.14%</span>
           </div>
 
           <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
@@ -122,10 +123,55 @@ export default function TradeDemo() {
 
           <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
             <span className="text-xs text-slate-500 font-medium block">Formula Density</span>
-            <div className="text-2xl font-extrabold text-blue-600 font-mono mt-0.5">
+            <div className="text-2xl font-extrabold text-emerald-600 font-mono mt-0.5">
               11,007
             </div>
             <span className="text-[11px] text-slate-400 block mt-0.5">INDEX/MATCH, SUMIFS, XLOOKUP</span>
+          </div>
+        </div>
+
+        {/* Visual Graph: Regional Revenue & Margin Distribution Bars */}
+        <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-4">
+          <div className="flex items-center justify-between">
+            <span className="text-xs font-bold text-slate-600 uppercase tracking-wider flex items-center gap-1.5">
+              <BarChart2 className="w-4 h-4 text-emerald-600" />
+              <span>Continental Revenue Share & Operating Margin Profile</span>
+            </span>
+            <span className="text-xs font-mono text-emerald-700 font-semibold bg-emerald-100/70 px-2.5 py-0.5 rounded-full">
+              6 Continental Clusters
+            </span>
+          </div>
+
+          <div className="space-y-3">
+            {displayedRegions.map((reg, idx) => {
+              const maxRev = 171168.40;
+              const pctWidth = reg.isBugged ? 0 : Math.round((reg.revenue / maxRev) * 100);
+              return (
+                <div key={idx} className="bg-white p-3 rounded-xl border border-slate-200 shadow-2xs">
+                  <div className="flex items-center justify-between text-xs mb-1.5">
+                    <span className="font-bold text-slate-800 font-sans">{reg.region}</span>
+                    <div className="flex items-center gap-3 font-mono">
+                      <span className="font-bold text-slate-900">
+                        {reg.isBugged ? '$0.00 (Bugged)' : `$${reg.revenue.toLocaleString()}`}
+                      </span>
+                      <span className="text-emerald-700 bg-emerald-50 px-2 py-0.2 rounded font-semibold text-[11px] border border-emerald-200/60">
+                        {reg.isBugged ? 'N/A' : `${reg.margin}% margin`}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="w-full h-3 bg-slate-100 rounded-full overflow-hidden">
+                    <div 
+                      className={`h-full rounded-full transition-all duration-500 ${
+                        reg.isBugged 
+                          ? 'bg-rose-400' 
+                          : 'bg-gradient-to-r from-emerald-500 to-green-600'
+                      }`}
+                      style={{ width: `${Math.max(2, pctWidth)}%` }}
+                    />
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
 
@@ -133,13 +179,13 @@ export default function TradeDemo() {
         <div className={`p-6 rounded-2xl border transition-all ${
           showPreAuditBug 
             ? 'bg-rose-50/70 border-rose-200' 
-            : 'bg-emerald-50/60 border-emerald-200'
+            : 'bg-emerald-50/70 border-emerald-300 ring-2 ring-emerald-500/10'
         }`}>
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
               <div className="flex items-center gap-2">
                 <span className={`px-2.5 py-0.5 rounded-full text-xs font-bold ${
-                  showPreAuditBug ? 'bg-rose-200 text-rose-800' : 'bg-emerald-200 text-emerald-800'
+                  showPreAuditBug ? 'bg-rose-200 text-rose-800' : 'bg-emerald-200 text-emerald-900'
                 }`}>
                   {showPreAuditBug ? 'FLAWED INGESTION STATE (BUG ACTIVE)' : 'RECONCILED AUDIT STATE (CORRECTED)'}
                 </span>
@@ -176,8 +222,8 @@ export default function TradeDemo() {
             <h4 className="text-sm font-bold text-slate-900 uppercase tracking-wider">
               Regional Commercial Performance & Freight Disparity
             </h4>
-            <span className="text-xs text-slate-500 font-mono">
-              Asia Freight Disparity: <strong className="text-amber-700">+$8.54/order (~$1.36K margin leak)</strong>
+            <span className="text-xs text-emerald-800 font-mono font-semibold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+              Asia Freight Disparity: +$8.54/order (~$1.36K margin leak)
             </span>
           </div>
 
@@ -282,7 +328,7 @@ export default function TradeDemo() {
               <tbody className="divide-y divide-slate-100 font-mono">
                 {filteredOrders.map((ord) => (
                   <tr key={ord.id} className="hover:bg-slate-50">
-                    <td className="py-2.5 px-3 text-blue-600 font-semibold">{ord.id}</td>
+                    <td className="py-2.5 px-3 text-emerald-700 font-semibold">{ord.id}</td>
                     <td className="py-2.5 px-3 text-slate-500">{ord.date}</td>
                     <td className="py-2.5 px-3 font-sans text-slate-800">{ord.customer}</td>
                     <td className="py-2.5 px-3 font-sans text-slate-600">{ord.country} ({ord.region})</td>

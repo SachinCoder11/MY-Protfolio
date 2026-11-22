@@ -35,13 +35,6 @@ export default function Footer() {
           >
             LinkedIn Profile
           </a>
-          <span className="text-slate-300">•</span>
-          <a
-            href={`mailto:${candidate.email}`}
-            className="text-emerald-700 hover:text-emerald-800 transition-colors"
-          >
-            Email Me
-          </a>
         </div>
       </div>
 

@@ -246,7 +246,7 @@ export default function ChatbotPrototype({ isOpen, onClose, onSelectDemo }) {
                   <div className="mt-3.5 pt-3.5 border-t border-slate-100 space-y-2.5">
                     <div className="bg-blue-50/80 p-3 rounded-xl border border-blue-100">
                       <div className="flex items-center justify-between">
-                        <span className="text-[11px] font-bold text-blue-700 uppercase tracking-wider font-mono">
+                        <span className="text-[11px] font-bold text-blue-700 uppercase tracking-wider font-sans">
                           {msg.recommendation.category}
                         </span>
                         <span className="text-[11px] text-emerald-700 font-semibold bg-emerald-100/60 px-2 py-0.2 rounded-full">
@@ -259,7 +259,7 @@ export default function ChatbotPrototype({ isOpen, onClose, onSelectDemo }) {
                       <p className="text-xs text-slate-600 mt-1">
                         <strong>Best For:</strong> {msg.recommendation.bestFor}
                       </p>
-                      <div className="text-[11px] text-slate-500 mt-1 font-mono">
+                      <div className="text-[11px] text-slate-500 mt-1 font-sans">
                         <strong>Tech:</strong> {msg.recommendation.technologies}
                       </div>
                     </div>

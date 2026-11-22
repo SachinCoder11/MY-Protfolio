@@ -29,7 +29,7 @@ export default function ProjectThreeSpace() {
             <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-purple-50 text-purple-800 border border-purple-200/90 shadow-2xs">
               Exploratory Data Analysis & Quality
             </span>
-            <span className="text-xs text-purple-700/70 font-mono font-semibold">03 of 03</span>
+            <span className="text-xs text-purple-700/80 font-medium">03 of 03</span>
           </div>
 
           <h2 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
@@ -76,7 +76,7 @@ export default function ProjectThreeSpace() {
               </span>
             </div>
           </div>
-          <p className="text-[11px] text-slate-500 text-center font-mono">
+          <p className="text-xs text-slate-500 text-center font-medium">
             Launch frequency and budget missingness patterns across 4,324 space missions
           </p>
         </div>

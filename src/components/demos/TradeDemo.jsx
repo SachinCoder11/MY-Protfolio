@@ -57,7 +57,7 @@ export default function TradeDemo() {
         <div>
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-semibold">
+            <span className="text-xs font-sans uppercase tracking-widest text-emerald-400 font-semibold">
               EXECUTIVE DATA RECONCILIATION
             </span>
           </div>
@@ -88,7 +88,7 @@ export default function TradeDemo() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3.5">
           <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
             <span className="text-xs text-slate-500 font-medium block">Total Commercial Volume</span>
-            <div className="text-2xl font-extrabold text-slate-900 font-mono mt-0.5">
+            <div className="text-2xl font-extrabold text-slate-900 font-sans mt-0.5">
               ${displayedRevenue.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </div>
             {showPreAuditBug && (
@@ -105,7 +105,7 @@ export default function TradeDemo() {
 
           <div className="bg-emerald-50/60 p-4 rounded-xl border border-emerald-200">
             <span className="text-xs text-emerald-800 font-medium block">Operating Profit</span>
-            <div className="text-2xl font-extrabold text-emerald-700 font-mono mt-0.5">
+            <div className="text-2xl font-extrabold text-emerald-700 font-sans mt-0.5">
               ${showPreAuditBug ? "109,622.28" : kpis.operatingProfit.toLocaleString('en-US', { minimumFractionDigits: 2 })}
             </div>
             <span className="text-[11px] text-emerald-600 font-medium block mt-0.5">Weighted Margin: 28.14%</span>
@@ -113,7 +113,7 @@ export default function TradeDemo() {
 
           <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
             <span className="text-xs text-slate-500 font-medium block">Total Trade Transactions</span>
-            <div className="text-2xl font-extrabold text-slate-900 font-mono mt-0.5">
+            <div className="text-2xl font-extrabold text-slate-900 font-sans mt-0.5">
               {displayedOrders}
             </div>
             <span className="text-[11px] text-slate-400 block mt-0.5">
@@ -123,7 +123,7 @@ export default function TradeDemo() {
 
           <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
             <span className="text-xs text-slate-500 font-medium block">Formula Density</span>
-            <div className="text-2xl font-extrabold text-emerald-600 font-mono mt-0.5">
+            <div className="text-2xl font-extrabold text-emerald-600 font-sans mt-0.5">
               11,007
             </div>
             <span className="text-[11px] text-slate-400 block mt-0.5">INDEX/MATCH, SUMIFS, XLOOKUP</span>
@@ -137,7 +137,7 @@ export default function TradeDemo() {
               <BarChart2 className="w-4 h-4 text-emerald-600" />
               <span>Continental Revenue Share & Operating Margin Profile</span>
             </span>
-            <span className="text-xs font-mono text-emerald-700 font-semibold bg-emerald-100/70 px-2.5 py-0.5 rounded-full">
+            <span className="text-xs font-sans text-emerald-700 font-semibold bg-emerald-100/70 px-2.5 py-0.5 rounded-full">
               6 Continental Clusters
             </span>
           </div>
@@ -150,7 +150,7 @@ export default function TradeDemo() {
                 <div key={idx} className="bg-white p-3 rounded-xl border border-slate-200 shadow-2xs">
                   <div className="flex items-center justify-between text-xs mb-1.5">
                     <span className="font-bold text-slate-800 font-sans">{reg.region}</span>
-                    <div className="flex items-center gap-3 font-mono">
+                    <div className="flex items-center gap-3 font-sans">
                       <span className="font-bold text-slate-900">
                         {reg.isBugged ? '$0.00 (Bugged)' : `$${reg.revenue.toLocaleString()}`}
                       </span>
@@ -222,7 +222,7 @@ export default function TradeDemo() {
             <h4 className="text-sm font-bold text-slate-900 uppercase tracking-wider">
               Regional Commercial Performance & Freight Disparity
             </h4>
-            <span className="text-xs text-emerald-800 font-mono font-semibold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+            <span className="text-xs text-emerald-800 font-sans font-semibold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
               Asia Freight Disparity: +$8.54/order (~$1.36K margin leak)
             </span>
           </div>
@@ -239,7 +239,7 @@ export default function TradeDemo() {
                   <th className="py-3 px-4">Audit Status</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 font-mono">
+              <tbody className="divide-y divide-slate-100 font-sans">
                 {displayedRegions.map((reg, idx) => (
                   <tr key={idx} className={reg.isBugged ? 'bg-rose-50/50 text-rose-900' : 'hover:bg-slate-50/70'}>
                     <td className="py-3 px-4 font-sans font-semibold text-slate-900 flex items-center gap-2">
@@ -325,7 +325,7 @@ export default function TradeDemo() {
                   <th className="py-2.5 px-3">Margin</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 font-mono">
+              <tbody className="divide-y divide-slate-100 font-sans">
                 {filteredOrders.map((ord) => (
                   <tr key={ord.id} className="hover:bg-slate-50">
                     <td className="py-2.5 px-3 text-emerald-700 font-semibold">{ord.id}</td>

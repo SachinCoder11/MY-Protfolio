@@ -58,7 +58,7 @@ export default function ProjectsSection({ onSelectDemo }) {
                       <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100/80 text-blue-800">
                         {project.badge}
                       </span>
-                      <span className="text-xs font-mono font-medium text-slate-400">
+                      <span className="text-xs font-sans font-medium text-slate-400">
                         0{idx + 1}
                       </span>
                     </div>
@@ -91,7 +91,7 @@ export default function ProjectsSection({ onSelectDemo }) {
                           <div className="text-[11px] text-slate-500 uppercase tracking-wider font-semibold">
                             {m.label}
                           </div>
-                          <div className="text-sm font-bold text-slate-900 font-mono mt-0.5">
+                          <div className="text-sm font-bold text-slate-900 font-sans mt-0.5">
                             {m.value}
                           </div>
                         </div>

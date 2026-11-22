@@ -51,7 +51,7 @@ export default function FinanceDemo() {
         <div>
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-semibold">
+            <span className="text-xs font-sans uppercase tracking-widest text-emerald-400 font-semibold">
               STATISTICAL FORENSIC CONSOLE
             </span>
           </div>
@@ -86,22 +86,22 @@ export default function FinanceDemo() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
             <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
               <span className="text-xs text-slate-500 font-medium block">Raw Filing Rows</span>
-              <span className="text-2xl font-bold text-slate-900 font-mono">96,632</span>
+              <span className="text-2xl font-bold text-slate-900 font-sans">96,632</span>
               <span className="text-[11px] text-slate-400 block mt-0.5">130 statutory columns</span>
             </div>
             <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
               <span className="text-xs text-slate-500 font-medium block">Pruned Null Columns</span>
-              <span className="text-2xl font-bold text-amber-600 font-mono">16 Pruned</span>
+              <span className="text-2xl font-bold text-amber-600 font-sans">16 Pruned</span>
               <span className="text-[11px] text-slate-400 block mt-0.5">100% empty attributes</span>
             </div>
             <div className="bg-slate-50 p-4 rounded-xl border border-slate-200">
               <span className="text-xs text-slate-500 font-medium block">Purged Missing Cells</span>
-              <span className="text-2xl font-bold text-blue-600 font-mono">7,001,669</span>
+              <span className="text-2xl font-bold text-blue-600 font-sans">7,001,669</span>
               <span className="text-[11px] text-slate-400 block mt-0.5">Zero imputation bias</span>
             </div>
             <div className="bg-emerald-50/70 p-4 rounded-xl border border-emerald-200">
               <span className="text-xs text-emerald-800 font-medium block">Active Revenue Cohort</span>
-              <span className="text-2xl font-bold text-emerald-700 font-mono">45,414</span>
+              <span className="text-2xl font-bold text-emerald-700 font-sans">45,414</span>
               <span className="text-[11px] text-emerald-600 font-medium block mt-0.5">✓ 100% Verified Firms</span>
             </div>
           </div>
@@ -159,11 +159,11 @@ export default function FinanceDemo() {
                   >
                     <div className="flex items-center justify-between text-xs mb-1.5">
                       <div className="flex items-center gap-2">
-                        <span className="font-bold text-slate-900 font-mono">{q.quartile}</span>
+                        <span className="font-bold text-slate-900 font-sans">{q.quartile}</span>
                         <span className="text-slate-500">({q.range})</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="font-extrabold text-slate-900 font-mono text-sm">{q.medianMargin}%</span>
+                        <span className="font-extrabold text-slate-900 font-sans text-sm">{q.medianMargin}%</span>
                         <span className={`text-[10px] px-2 py-0.2 rounded-full font-bold ${
                           q.risk === 'Low' ? 'bg-emerald-100 text-emerald-800' :
                           q.risk === 'Moderate' ? 'bg-blue-100 text-blue-800' :
@@ -195,7 +195,7 @@ export default function FinanceDemo() {
                 <CheckCircle2 className="w-4 h-4 text-emerald-600" />
                 <span>{activeQuartile.quartile} Diagnostic Detail:</span>
               </span>
-              <span className="text-xs font-mono text-emerald-800 font-semibold bg-emerald-100 px-2 py-0.5 rounded">
+              <span className="text-xs font-sans text-emerald-800 font-semibold bg-emerald-100 px-2 py-0.5 rounded">
                 Range: {activeQuartile.range}
               </span>
             </div>
@@ -230,7 +230,7 @@ export default function FinanceDemo() {
                 type="number"
                 value={simRevenue}
                 onChange={(e) => setSimRevenue(Math.max(1, Number(e.target.value)))}
-                className="w-full px-3 py-2.5 rounded-lg border border-slate-300 font-mono text-sm focus:ring-2 focus:ring-emerald-500"
+                className="w-full px-3 py-2.5 rounded-lg border border-slate-300 font-sans text-sm focus:ring-2 focus:ring-emerald-500"
               />
             </div>
 
@@ -242,7 +242,7 @@ export default function FinanceDemo() {
                 type="number"
                 value={simExpenses}
                 onChange={(e) => setSimExpenses(Math.max(0, Number(e.target.value)))}
-                className="w-full px-3 py-2.5 rounded-lg border border-slate-300 font-mono text-sm focus:ring-2 focus:ring-emerald-500"
+                className="w-full px-3 py-2.5 rounded-lg border border-slate-300 font-sans text-sm focus:ring-2 focus:ring-emerald-500"
               />
             </div>
 
@@ -254,7 +254,7 @@ export default function FinanceDemo() {
                 type="number"
                 value={simFinanceCosts}
                 onChange={(e) => setSimFinanceCosts(Math.max(0, Number(e.target.value)))}
-                className="w-full px-3 py-2.5 rounded-lg border border-slate-300 font-mono text-sm focus:ring-2 focus:ring-emerald-500"
+                className="w-full px-3 py-2.5 rounded-lg border border-slate-300 font-sans text-sm focus:ring-2 focus:ring-emerald-500"
               />
             </div>
           </div>
@@ -263,28 +263,28 @@ export default function FinanceDemo() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
             <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
               <span className="text-[11px] text-slate-500 font-semibold uppercase block">Net Profit</span>
-              <span className={`text-lg font-bold font-mono ${netProfit >= 0 ? 'text-emerald-700' : 'text-rose-600'}`}>
+              <span className={`text-lg font-bold font-sans ${netProfit >= 0 ? 'text-emerald-700' : 'text-rose-600'}`}>
                 ${netProfit.toLocaleString()}
               </span>
             </div>
 
             <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
               <span className="text-[11px] text-slate-500 font-semibold uppercase block">Profit Margin</span>
-              <span className={`text-lg font-bold font-mono ${profitMargin >= 2 ? 'text-emerald-600' : profitMargin >= 0 ? 'text-amber-600' : 'text-rose-600'}`}>
+              <span className={`text-lg font-bold font-sans ${profitMargin >= 2 ? 'text-emerald-600' : profitMargin >= 0 ? 'text-amber-600' : 'text-rose-600'}`}>
                 {profitMargin.toFixed(2)}%
               </span>
             </div>
 
             <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
               <span className="text-[11px] text-slate-500 font-semibold uppercase block">Finance Cost Ratio</span>
-              <span className="text-lg font-bold text-slate-900 font-mono">
+              <span className="text-lg font-bold text-slate-900 font-sans">
                 {financeCostRatio.toFixed(2)}%
               </span>
             </div>
 
             <div className={`p-3.5 rounded-xl border ${riskBadge}`}>
               <span className="text-[11px] font-semibold uppercase block">Solvency Tier</span>
-              <span className="text-sm font-bold font-mono block mt-0.5">
+              <span className="text-sm font-bold font-sans block mt-0.5">
                 {simulatedQuartile}
               </span>
             </div>

@@ -78,7 +78,7 @@ export default function RagDemo() {
         <div>
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-semibold">
+            <span className="text-xs font-sans uppercase tracking-widest text-emerald-400 font-semibold">
               LIVE INTERACTIVE PREVIEW
             </span>
           </div>
@@ -128,7 +128,7 @@ export default function RagDemo() {
                 >
                   <GitBranch className="w-4 h-4" />
                   <span>{repo.name}</span>
-                  <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
+                  <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-sans ${
                     selectedRepoId === repo.id ? 'bg-blue-500 text-white' : 'bg-slate-200 text-slate-700'
                   }`}>
                     {repo.vectors} vecs
@@ -142,17 +142,17 @@ export default function RagDemo() {
           <div className="flex items-center gap-3 bg-slate-50 p-2.5 rounded-xl border border-slate-200 text-xs">
             <div>
               <span className="text-slate-400 block text-[10px] uppercase font-bold">Files / Lines</span>
-              <span className="font-mono font-bold text-slate-800">{currentRepo.files} files / {currentRepo.lines.toLocaleString()} LOC</span>
+              <span className="font-sans font-bold text-slate-800">{currentRepo.files} files / {currentRepo.lines.toLocaleString()} LOC</span>
             </div>
             <div className="w-px h-7 bg-slate-200" />
             <div>
               <span className="text-slate-400 block text-[10px] uppercase font-bold">Chroma Vectors</span>
-              <span className="font-mono font-bold text-blue-600">{currentRepo.vectors} Chunks</span>
+              <span className="font-sans font-bold text-blue-600">{currentRepo.vectors} Chunks</span>
             </div>
             <div className="w-px h-7 bg-slate-200" />
             <div>
               <span className="text-slate-400 block text-[10px] uppercase font-bold">Quality Score</span>
-              <span className="font-mono font-bold text-emerald-600">{currentRepo.qualityScore}/100</span>
+              <span className="font-sans font-bold text-emerald-600">{currentRepo.qualityScore}/100</span>
             </div>
           </div>
         </div>
@@ -247,7 +247,7 @@ export default function RagDemo() {
                 <div className="text-sm font-semibold text-slate-700">
                   Retrieving semantically aligned code chunks...
                 </div>
-                <div className="text-xs text-slate-400 font-mono">
+                <div className="text-xs text-slate-400 font-sans">
                   Vector distance &lt; 0.2 • Filtering AST nodes in {currentRepo.name}
                 </div>
               </div>
@@ -266,7 +266,7 @@ export default function RagDemo() {
                       {activeQueryResult.question}
                     </h4>
                   </div>
-                  <span className="text-xs font-mono text-slate-400">
+                  <span className="text-xs font-sans text-slate-400">
                     Confidence: 96%
                   </span>
                 </div>
@@ -285,7 +285,7 @@ export default function RagDemo() {
                     {activeQueryResult.citations.map((cite, cIdx) => (
                       <div 
                         key={cIdx}
-                        className="bg-white p-3 rounded-lg border border-slate-200 flex items-center justify-between text-xs font-mono"
+                        className="bg-white p-3 rounded-lg border border-slate-200 flex items-center justify-between text-xs font-sans"
                       >
                         <div className="flex items-center gap-2 overflow-hidden">
                           <span className="w-2 h-2 rounded-full bg-blue-500" />
@@ -317,28 +317,28 @@ export default function RagDemo() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
                 <span className="text-xs text-slate-500 uppercase font-semibold">API Routes</span>
-                <div className="text-2xl font-bold font-mono text-slate-900 mt-1">
+                <div className="text-2xl font-bold font-sans text-slate-900 mt-1">
                   {currentRepo.keyComponents.routes}
                 </div>
                 <span className="text-xs text-slate-400 mt-0.5 block">AST Route Nodes</span>
               </div>
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
                 <span className="text-xs text-slate-500 uppercase font-semibold">Service Modules</span>
-                <div className="text-2xl font-bold font-mono text-slate-900 mt-1">
+                <div className="text-2xl font-bold font-sans text-slate-900 mt-1">
                   {currentRepo.keyComponents.services}
                 </div>
                 <span className="text-xs text-slate-400 mt-0.5 block">Business Logic Units</span>
               </div>
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
                 <span className="text-xs text-slate-500 uppercase font-semibold">Data Models</span>
-                <div className="text-2xl font-bold font-mono text-slate-900 mt-1">
+                <div className="text-2xl font-bold font-sans text-slate-900 mt-1">
                   {currentRepo.keyComponents.models}
                 </div>
                 <span className="text-xs text-slate-400 mt-0.5 block">Schemas / Entities</span>
               </div>
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
                 <span className="text-xs text-slate-500 uppercase font-semibold">Middlewares</span>
-                <div className="text-2xl font-bold font-mono text-slate-900 mt-1">
+                <div className="text-2xl font-bold font-sans text-slate-900 mt-1">
                   {currentRepo.keyComponents.middlewares}
                 </div>
                 <span className="text-xs text-slate-400 mt-0.5 block">Security / Interceptors</span>
@@ -368,7 +368,7 @@ export default function RagDemo() {
                   <div key={lang} className="flex items-center gap-1.5">
                     <span className="w-2.5 h-2.5 rounded-full bg-blue-600" />
                     <span>{lang}</span>
-                    <span className="text-slate-400 font-mono">({pct}%)</span>
+                    <span className="text-slate-400 font-sans">({pct}%)</span>
                   </div>
                 ))}
               </div>
@@ -388,11 +388,11 @@ export default function RagDemo() {
                 { num: "05", name: "RAG Query", tech: "Context Builder", desc: "Retrieves top-k chunks with file/line citations" }
               ].map((step, idx) => (
                 <div key={idx} className="p-4 rounded-xl bg-slate-50 border border-slate-200 relative">
-                  <div className="text-xs font-mono font-bold text-blue-600 mb-1">
+                  <div className="text-xs font-sans font-bold text-blue-600 mb-1">
                     STEP {step.num}
                   </div>
                   <div className="font-bold text-slate-900 text-sm">{step.name}</div>
-                  <div className="text-[11px] font-semibold text-slate-500 font-mono mt-0.5">{step.tech}</div>
+                  <div className="text-[11px] font-semibold text-slate-500 font-sans mt-0.5">{step.tech}</div>
                   <p className="text-xs text-slate-600 mt-2">{step.desc}</p>
                 </div>
               ))}

@@ -45,7 +45,7 @@ export default function ProjectTwoFinance() {
               <Clock className="w-3 h-3 text-amber-600" />
               <span>Predictive Modeling: Next Phase</span>
             </span>
-            <span className="text-xs text-blue-700/70 font-mono font-semibold">02 of 03</span>
+            <span className="text-xs text-blue-700/80 font-medium">02 of 03</span>
           </div>
 
           <h2 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
@@ -110,7 +110,7 @@ export default function ProjectTwoFinance() {
             </div>
           </div>
 
-          <p className="md:col-span-2 text-[11px] text-slate-500 text-center font-mono">
+          <p className="md:col-span-2 text-xs text-slate-500 text-center font-medium">
             Distribution and debt burden charts generated from MCA corporate filings
           </p>
         </div>
@@ -145,7 +145,7 @@ export default function ProjectTwoFinance() {
                 <FileText className="w-3.5 h-3.5 text-blue-600" />
                 Data Source & Processing Lineage
               </span>
-              <span className="text-[10px] font-mono font-semibold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200/70">
+              <span className="text-[11px] font-semibold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200/70">
                 Official MCA Public Filings
               </span>
             </div>
@@ -172,15 +172,15 @@ export default function ProjectTwoFinance() {
 
             <div className="grid grid-cols-3 gap-2 text-center text-xs py-1">
               <div className="bg-emerald-50/80 p-2 rounded border border-emerald-200/80 shadow-2xs">
-                <div className="font-bold text-emerald-800 text-sm font-mono">35,697</div>
+                <div className="font-bold text-emerald-800 text-sm tracking-tight">35,697</div>
                 <div className="text-[10px] text-emerald-700">Profitable Firms (74.3%)</div>
               </div>
               <div className="bg-rose-50/80 p-2 rounded border border-rose-200/80 shadow-2xs">
-                <div className="font-bold text-rose-800 text-sm font-mono">12,119</div>
+                <div className="font-bold text-rose-800 text-sm tracking-tight">12,119</div>
                 <div className="text-[10px] text-rose-700">Loss-Making Firms (25.2%)</div>
               </div>
               <div className="bg-white p-2 rounded border border-slate-200 shadow-2xs">
-                <div className="font-bold text-slate-700 text-sm font-mono">252</div>
+                <div className="font-bold text-slate-700 text-sm tracking-tight">252</div>
                 <div className="text-[10px] text-slate-500">Exact Breakeven (0.5%)</div>
               </div>
             </div>
@@ -191,7 +191,7 @@ export default function ProjectTwoFinance() {
             <ul className="space-y-1.5 text-xs text-slate-700">
               <li className="flex items-start gap-1.5">
                 <span className="text-blue-600 font-bold">•</span>
-                <span><strong>Median vs. Mean:</strong> Extreme skewness makes averages deceptive. The true median profit margin across active operating companies is <strong className="font-mono text-slate-900">1.81%</strong>.</span>
+                <span><strong>Median vs. Mean:</strong> Extreme skewness makes averages deceptive. The true median profit margin across active operating companies is <strong className="text-slate-900 font-semibold">1.81%</strong>.</span>
               </li>
               <li className="flex items-start gap-1.5">
                 <span className="text-blue-600 font-bold">•</span>
@@ -199,7 +199,7 @@ export default function ProjectTwoFinance() {
               </li>
               <li className="flex items-start gap-1.5">
                 <span className="text-blue-600 font-bold">•</span>
-                <span><strong>Debt Burden Impact:</strong> Grouping companies by finance cost quartiles showed median profit margin drops from <strong className="text-emerald-700 font-mono">3.04% in Q1</strong> (low debt) down to <strong className="text-rose-700 font-mono">1.32% in Q4</strong> (high debt), representing a 56.5% decline in operational profit.</span>
+                <span><strong>Debt Burden Impact:</strong> Grouping companies by finance cost quartiles showed median profit margin drops from <strong className="text-emerald-700 font-semibold">3.04% in Q1</strong> (low debt) down to <strong className="text-rose-700 font-semibold">1.32% in Q4</strong> (high debt), representing a 56.5% decline in operational profit.</span>
               </li>
             </ul>
           </div>

@@ -101,7 +101,7 @@ export default function GithubContributions() {
                 <Flame className="w-4 h-4 text-amber-500" />
                 <div>
                   <span className="text-slate-400 block text-[10px] uppercase font-bold">Active Streak</span>
-                  <span className="font-bold text-slate-900 font-mono">18 Days</span>
+                  <span className="font-bold text-slate-900 font-sans">18 Days</span>
                 </div>
               </div>
 
@@ -109,7 +109,7 @@ export default function GithubContributions() {
                 <GitCommit className="w-4 h-4 text-emerald-600" />
                 <div>
                   <span className="text-slate-400 block text-[10px] uppercase font-bold">Past 6 Months</span>
-                  <span className="font-bold text-emerald-700 font-mono">412 Commits</span>
+                  <span className="font-bold text-emerald-700 font-sans">412 Commits</span>
                 </div>
               </div>
 
@@ -120,7 +120,7 @@ export default function GithubContributions() {
                 className="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold shadow-xs transition-colors"
               >
                 <span>View Profile</span>
-                <span className="text-slate-400 font-mono">→</span>
+                <span className="text-slate-400 font-sans">→</span>
               </a>
             </div>
           </div>
@@ -148,7 +148,7 @@ export default function GithubContributions() {
               <div className="flex items-center justify-between pt-4 text-[11px] text-slate-500">
                 <div className="font-medium text-slate-600">
                   {hoveredCell ? (
-                    <span className="font-mono text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                    <span className="font-sans text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
                       📅 {hoveredCell.date} : {hoveredCell.count} contributions
                     </span>
                   ) : (

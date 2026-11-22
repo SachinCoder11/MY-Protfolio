@@ -103,7 +103,7 @@ export default function Hero({ onExploreDemos, onOpenChatbot }) {
                 key={idx}
                 className="p-4 rounded-xl bg-white border border-slate-200/80 shadow-xs hover:border-blue-200 transition-all text-left"
               >
-                <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight font-mono">
+                <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight font-sans">
                   {stat.value}
                 </div>
                 <div className="text-xs text-slate-500 font-medium mt-1">

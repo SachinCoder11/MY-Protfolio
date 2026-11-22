@@ -114,7 +114,7 @@ const Hero: React.FC = () => {
                 </div>
                 
                 {/* Code-like content */}
-                <div className="p-4 font-mono text-xs">
+                <div className="p-4 font-sans text-xs">
                   <div className="text-green-400">{'> '}<span className="text-purple-400">user</span>.profile</div>
                   <div className="text-slate-400 mt-2">{'{'}</div>
                   <div className="pl-4">

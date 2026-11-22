@@ -67,7 +67,7 @@ export default function ExperienceEducation() {
                     ))}
                   </ul>
 
-                  <div className="pt-3 border-t border-slate-100 flex flex-wrap gap-2 text-xs font-mono text-slate-600">
+                  <div className="pt-3 border-t border-slate-100 flex flex-wrap gap-2 text-xs font-sans text-slate-600">
                     <span className="px-2 py-0.5 bg-slate-100 rounded">PropPoints CRM</span>
                     <span className="px-2 py-0.5 bg-slate-100 rounded">Jivan Blood Bank</span>
                     <span className="px-2 py-0.5 bg-slate-100 rounded">MySQL</span>
@@ -105,7 +105,7 @@ export default function ExperienceEducation() {
                     <h4 className="text-base sm:text-lg font-bold text-slate-900">
                       {edu.degree}
                     </h4>
-                    <span className="text-xs font-mono font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full w-fit">
+                    <span className="text-xs font-sans font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full w-fit">
                       {edu.year}
                     </span>
                   </div>

@@ -42,7 +42,7 @@ const TypewriterEffect: React.FC<TypewriterEffectProps> = ({
   }, [displayText, currentIndex, isDeleting, texts, speed, delay]);
   
   return (
-    <div className="font-mono text-2xl md:text-3xl font-semibold text-cyan-400">
+    <div className="font-sans text-2xl md:text-3xl font-semibold text-cyan-400">
       {displayText}
       <span className="animate-blink border-r-2 border-cyan-400 ml-1">&nbsp;</span>
     </div>

@@ -31,7 +31,7 @@ export default function ProjectOneExcel() {
             <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-800 border border-emerald-200/90 shadow-2xs">
               Excel & Commercial Modeling
             </span>
-            <span className="text-xs text-emerald-700/70 font-mono font-semibold">01 of 03</span>
+            <span className="text-xs text-emerald-700/80 font-medium">01 of 03</span>
           </div>
           <h2 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
             Global Trade Analytics & Data Quality Intelligence
@@ -113,8 +113,8 @@ export default function ProjectOneExcel() {
               </span>
             </div>
           </div>
-          <p className="text-[11px] text-slate-500 text-center font-mono">
-            Actual dashboard view from Sheet 09_Executive_Dashboard
+          <p className="text-xs text-slate-500 text-center font-medium">
+            Actual dashboard view from the Executive Dashboard sheet in Excel
           </p>
         </div>
 
@@ -127,7 +127,7 @@ export default function ProjectOneExcel() {
               The Context & Challenge
             </h3>
             <p>
-              This case study models an ETL ingestion defect that misclassified the North America region code <strong className="font-mono text-slate-900">"NA"</strong> as a missing null value (<strong className="font-mono text-rose-600">#N/A</strong>), hiding <strong className="text-slate-900 font-semibold">$86,214.30 across 87 orders</strong> from executive reporting.
+              This case study models an ETL ingestion defect that misclassified the North America region code <strong className="text-slate-900 font-semibold">"NA"</strong> as a missing null value (<strong className="text-rose-600 font-semibold">#N/A</strong>), hiding <strong className="text-slate-900 font-semibold">$86,214.30 across 87 orders</strong> from executive reporting.
             </p>
           </div>
 
@@ -137,7 +137,7 @@ export default function ProjectOneExcel() {
               How I Solved It in Excel
             </h3>
             <p>
-              Engineered a complete relational Excel workbook across <strong className="text-slate-900 font-semibold">10 linked worksheets</strong> analyzing 500 commercial transactions ($474,704.62 total sales, 28.14% operating margin). Sourced from an immutable baseline sheet (<strong className="font-mono text-xs text-slate-800">02_Raw_Trade_Data</strong>), normalized text, linked master dimension tables via <strong className="text-emerald-800 font-semibold">11,000+ dynamic formula cells</strong> (INDEX/MATCH, SUMIFS, AVERAGEIFS, XLOOKUP, tiered pricing logic), and resolved the NA bug without data loss.
+              Engineered a complete relational Excel workbook across <strong className="text-slate-900 font-semibold">10 linked worksheets</strong> analyzing 500 commercial transactions ($474,704.62 total sales, 28.14% operating margin). Sourced from an immutable baseline sheet (<strong className="text-xs text-slate-800 font-semibold">02_Raw_Trade_Data</strong>), normalized text, linked master dimension tables via <strong className="text-emerald-800 font-semibold">11,000+ dynamic formula cells</strong> (INDEX/MATCH, SUMIFS, AVERAGEIFS, XLOOKUP, tiered pricing logic), and resolved the NA bug without data loss.
             </p>
           </div>
 

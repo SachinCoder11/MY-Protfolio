@@ -4,7 +4,7 @@ import ProjectOneExcel from './components/ProjectOneExcel';
 import ProjectTwoFinance from './components/ProjectTwoFinance';
 import ProjectThreeSpace from './components/ProjectThreeSpace';
 import Footer from './components/Footer';
-import { Layers, FileSpreadsheet, Database, Rocket, ShieldCheck } from 'lucide-react';
+import { FileSpreadsheet, Database, Rocket, Sparkles } from 'lucide-react';
 
 export default function App() {
   const scrollTo = (id) => {
@@ -17,7 +17,7 @@ export default function App() {
       {/* Subtle ambient background glow */}
       <div className="absolute top-0 inset-x-0 h-96 bg-gradient-to-b from-blue-50/50 via-indigo-50/20 to-transparent pointer-events-none" />
       
-      {/* Minimal Header */}
+      {/* Clean Header */}
       <Header />
 
       {/* Main Content Area */}
@@ -26,16 +26,16 @@ export default function App() {
         {/* Showcase Intro Banner */}
         <div className="bg-gradient-to-br from-white via-white to-blue-50/30 rounded-xl border border-slate-200/90 p-6 sm:p-7 shadow-xs space-y-3">
           <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-200/80">
-            <ShieldCheck className="w-3.5 h-3.5 text-blue-600" />
-            <span>Audited Resume Evidence Deliverables</span>
+            <Sparkles className="w-3.5 h-3.5 text-blue-600" />
+            <span>Featured Portfolio Work</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-            Selected Analytics Projects
+            Selected Analytics & Data Projects
           </h2>
 
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-3xl">
-            This technical showcase provides direct access to the three projects listed under <strong className="text-slate-900 font-semibold">Featured Analytics Projects</strong> on my resume. Every metric, statistical finding, formula count, and code repository is audited directly against original project files.
+            A practical look at three core analytics and engineering projects from my background—spanning advanced financial modeling in Excel, large-scale statutory corporate data pipelines in Python and SQL, and deep exploratory data audits. Each section includes working deliverables, source code repositories, and real takeaways.
           </p>
 
           {/* Quick Jump Links with Color-Coordinated Accents */}
@@ -83,7 +83,7 @@ export default function App() {
 
       </main>
 
-      {/* Minimal Footer */}
+      {/* Clean Footer */}
       <Footer />
     </div>
   );

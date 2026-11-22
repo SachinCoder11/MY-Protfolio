@@ -1,6 +1,5 @@
 import React from 'react';
 import { projectLinks } from '../config/projectLinks';
-import { Mail, Phone, MapPin, Github, Linkedin, ShieldCheck } from 'lucide-react';
 
 export default function Footer() {
   const { candidate } = projectLinks;
@@ -39,12 +38,11 @@ export default function Footer() {
       </div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 mt-4 pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-slate-400">
-        <div className="flex items-center gap-1.5">
-          <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-          <span>Every number and deliverable audited against original project files and statutory records.</span>
+        <div>
+          All metrics, formulas, and visualizations are built directly from project datasets and source repositories.
         </div>
         <div className="font-medium text-slate-500">
-          Featured Analytics Projects Showcase
+          Analytics & Engineering Showcase
         </div>
       </div>
     </footer>

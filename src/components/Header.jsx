@@ -1,6 +1,6 @@
 import React from 'react';
 import { projectLinks } from '../config/projectLinks';
-import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin } from 'lucide-react';
 
 export default function Header() {
   const { candidate } = projectLinks;
@@ -12,16 +12,11 @@ export default function Header() {
       
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div>
-          <div className="flex items-center gap-2">
-            <h1 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
-              {candidate.name}
-            </h1>
-            <span className="hidden sm:inline-flex px-2 py-0.5 rounded text-[11px] font-semibold bg-blue-50 text-blue-700 border border-blue-200/70">
-              Verified Projects
-            </span>
-          </div>
+          <h1 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
+            {candidate.name}
+          </h1>
           <p className="text-xs sm:text-sm text-slate-600 font-medium mt-0.5">
-            {candidate.role} • Featured Analytics Projects Showcase
+            {candidate.role} • Featured Projects & Code
           </p>
         </div>
 

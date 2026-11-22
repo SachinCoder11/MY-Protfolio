@@ -9,7 +9,8 @@ import {
   Clock, 
   BarChart3, 
   AlertTriangle,
-  TrendingDown
+  TrendingDown,
+  FileText
 } from 'lucide-react';
 import ImageModal from './ImageModal';
 
@@ -138,6 +139,27 @@ export default function ProjectTwoFinance() {
             <p>
               Cleaned 96,632 raw MCA XBRL records using <strong className="text-slate-900 font-semibold">Python (Pandas, NumPy) and MySQL</strong>. Pruned 16 completely empty (100% null) attributes, isolated 45,414 revenue-active firms for FY 2024–25, calculated deterministic financial ratios (Profit Margin, Expense Ratio, Finance Cost Ratio), and engineered an Interquartile Range (IQR) anomaly detection pipeline.
             </p>
+          </div>
+
+          {/* Data Sourcing & Ingestion Lineage (Compact & Authentic) */}
+          <div className="bg-slate-50/90 rounded-lg p-3.5 border border-slate-200/90 space-y-2 text-xs shadow-2xs">
+            <div className="flex items-center justify-between border-b border-slate-200/70 pb-1.5">
+              <span className="font-bold text-slate-800 uppercase tracking-wider text-[11px] flex items-center gap-1.5">
+                <FileText className="w-3.5 h-3.5 text-blue-600" />
+                Data Provenance & Extraction Lineage
+              </span>
+              <span className="text-[10px] font-mono font-semibold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200/70">
+                MCA Statutory Public Disclosures
+              </span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-slate-600 leading-relaxed">
+              <div>
+                <span className="font-semibold text-slate-800">• Where Taken:</span> Official statutory corporate filings from the <strong>Ministry of Corporate Affairs (MCA) / ROC</strong> repository (<code className="text-slate-800 font-mono text-[10px] bg-slate-100 px-1 py-0.5 rounded">XBRL-XBRL-PL-2025_part1.csv</code>) cross-referenced with MCA Master Company records.
+              </div>
+              <div>
+                <span className="font-semibold text-slate-800">• How Ingested & Cleaned:</span> Extracted 96,632 batch filings via Python; pruned 16 all-null tag columns (down to 114); isolated FY 2024–25 (<code className="text-slate-800 font-mono text-[10px] bg-slate-100 px-1 py-0.5 rounded">48,068 records</code>); and filtered out 2,654 non-operating shells into <code className="text-slate-800 font-mono text-[10px] bg-slate-100 px-1 py-0.5 rounded">MCA_PL_FY2024_25_Clean_Analysis.csv</code> (45,414 active firms).
+              </div>
+            </div>
           </div>
 
           {/* The Financial Distribution Story */}

@@ -10,7 +10,7 @@ export default function Header() {
       {/* Subtle top accent gradient */}
       <div className="h-1 bg-gradient-to-r from-emerald-500 via-blue-600 to-purple-600" />
       
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div>
           <h1 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
             {candidate.name}

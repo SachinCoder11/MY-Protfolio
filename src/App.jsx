@@ -21,7 +21,7 @@ export default function App() {
       <Header />
 
       {/* Main Content Area */}
-      <main className="relative flex-1 max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12 w-full space-y-8">
+      <main className="relative flex-1 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 w-full space-y-8">
         
         {/* Showcase Intro Banner */}
         <div className="bg-gradient-to-br from-white via-white to-blue-50/30 rounded-xl border border-slate-200/90 p-6 sm:p-7 shadow-xs space-y-3">

@@ -170,18 +170,18 @@ export default function ProjectTwoFinance() {
               Unlike textbook bell curves, actual statutory corporate profitability clusters tightly around zero with long positive and negative tails:
             </p>
 
-            <div className="grid grid-cols-3 gap-2 text-center text-xs py-1">
-              <div className="bg-emerald-50/80 p-2 rounded border border-emerald-200/80 shadow-2xs">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-center text-xs py-1">
+              <div className="bg-emerald-50/80 p-2 sm:p-2.5 rounded-lg border border-emerald-200/80 shadow-2xs">
                 <div className="font-bold text-emerald-800 text-sm tracking-tight">35,697</div>
-                <div className="text-[10px] text-emerald-700">Profitable Firms (74.3%)</div>
+                <div className="text-[11px] text-emerald-700 font-medium">Profitable Firms (74.3%)</div>
               </div>
-              <div className="bg-rose-50/80 p-2 rounded border border-rose-200/80 shadow-2xs">
+              <div className="bg-rose-50/80 p-2 sm:p-2.5 rounded-lg border border-rose-200/80 shadow-2xs">
                 <div className="font-bold text-rose-800 text-sm tracking-tight">12,119</div>
-                <div className="text-[10px] text-rose-700">Loss-Making Firms (25.2%)</div>
+                <div className="text-[11px] text-rose-700 font-medium">Loss-Making Firms (25.2%)</div>
               </div>
-              <div className="bg-white p-2 rounded border border-slate-200 shadow-2xs">
+              <div className="bg-white p-2 sm:p-2.5 rounded-lg border border-slate-200 shadow-2xs">
                 <div className="font-bold text-slate-700 text-sm tracking-tight">252</div>
-                <div className="text-[10px] text-slate-500">Exact Breakeven (0.5%)</div>
+                <div className="text-[11px] text-slate-500 font-medium">Exact Breakeven (0.5%)</div>
               </div>
             </div>
             <p className="text-[11px] text-slate-600">

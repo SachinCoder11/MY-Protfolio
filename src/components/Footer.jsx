@@ -6,7 +6,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-slate-200/80 bg-white/80 backdrop-blur-xs mt-16 py-8 text-xs text-slate-500">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>
           <div className="font-bold text-slate-900 text-sm">
             {candidate.name}
@@ -37,7 +37,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 mt-4 pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-slate-400">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-slate-400">
         <div>
           All metrics, formulas, and visualizations are built directly from project datasets and source repositories.
         </div>

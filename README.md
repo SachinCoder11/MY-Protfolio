@@ -1,4 +1,4 @@
-# Sachin Dinesh Dumbre — AI & Data Intelligence Portfolio
+# Sachin Dinesh Dumbre: AI & Data Intelligence Portfolio
 
 > **Production-Ready Web Portfolio with Interactive Project Demonstrations**  
 > Candidate: **Sachin Dinesh Dumbre** | AI Professional & Data Systems Specialist  

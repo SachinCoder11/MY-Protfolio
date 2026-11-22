@@ -103,7 +103,7 @@ export default function ProjectThreeSpace() {
               Standard automated tools often fill missing numerical fields with the dataset's global mean ($153.8M). Here, doing that mathematically introduced <strong className="text-rose-700 font-semibold">false $5,000M cost cluster artifacts</strong>, distorting decade-by-decade variance calculations by over 240%.
             </p>
             <p className="mt-2">
-              Instead of blindly guessing missing figures, I created a <strong className="text-slate-900 font-semibold">price-band segmentation model</strong> based on payload mass, target orbit, and launcher propulsion class—quarantining sparse records cleanly without corrupting true historical benchmarks.
+              Instead of blindly guessing missing figures, I created a <strong className="text-slate-900 font-semibold">price-band segmentation model</strong> based on payload mass, target orbit, and launcher propulsion class, quarantining sparse records cleanly without corrupting true historical benchmarks.
             </p>
           </div>
 

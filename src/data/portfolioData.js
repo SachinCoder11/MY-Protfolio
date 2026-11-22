@@ -55,7 +55,7 @@ export const skillsData = {
 
 export const experienceData = [
   {
-    role: "Software Development Intern — Business Applications & Data Operations",
+    role: "Software Development Intern: Business Applications & Data Operations",
     company: "Showstopper Technologies & Media Pvt Ltd",
     period: "Jun 2025 – Jan 2026 (Extended)",
     location: "Navi Mumbai, India",
@@ -319,7 +319,7 @@ export const tradeAuditData = {
     concealedRevenue: 86214.30,
     rootCause: "Excel/Python CSV parser treated the two-letter ISO country code 'NA' (North America region code) as a null string (#N/A missing value).",
     resolution: "Replaced raw auto-type conversion with strict string literal matching and secondary reference joins against Region Lookup table.",
-    freightDisparity: "Asia shipments incurred an average freight cost of $47.46 vs Europe at $38.92 — producing an estimated $1.36K margin leak across 179 Asia shipments."
+    freightDisparity: "Asia shipments incurred an average freight cost of $47.46 vs Europe at $38.92, producing an estimated $1.36K margin leak across 179 Asia shipments."
   },
   sampleOrders: [
     { id: "ORD_2025_0001", date: "2025-01-20", customer: "Emily Smith", country: "USA", region: "North America", product: "Travel Backpack", category: "Accessories", qty: 20, price: 55.22, total: 1104.40, margin: 28.4 },

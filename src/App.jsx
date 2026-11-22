@@ -35,7 +35,7 @@ export default function App() {
           </h2>
 
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-3xl">
-            A practical look at three core analytics and engineering projects from my background—spanning advanced financial modeling in Excel, large-scale statutory corporate data pipelines in Python and SQL, and deep exploratory data audits. Each section includes working deliverables, source code repositories, and real takeaways.
+            A practical look at three core analytics and engineering projects from my background, spanning advanced financial modeling in Excel, large-scale statutory corporate data pipelines in Python and SQL, and deep exploratory data audits. Each section includes working deliverables, source code repositories, and real takeaways.
           </p>
 
           {/* Quick Jump Links with Color-Coordinated Accents */}

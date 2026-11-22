@@ -21,7 +21,7 @@ export default function ProjectOneExcel() {
         onClose={() => setModalOpen(false)}
         imageSrc={globalTrade.previewImage}
         imageAlt="Executive Excel Dashboard Preview"
-        title="Global Trade Analytics — Audited 10-Sheet Executive Excel Model"
+        title="Global Trade Analytics: Audited 10-Sheet Executive Excel Model"
       />
 
       {/* Project Header & Badge */}

@@ -199,7 +199,7 @@ export default function ProjectTwoFinance() {
               </li>
               <li className="flex items-start gap-1.5">
                 <span className="text-blue-600 font-bold">•</span>
-                <span><strong>Debt Burden Impact:</strong> Grouping companies by finance cost quartiles showed median profit margin drops from <strong className="text-emerald-700 font-mono">3.04% in Q1</strong> (low debt) down to <strong className="text-rose-700 font-mono">1.32% in Q4</strong> (high debt)—a 56.5% decline in operational profit.</span>
+                <span><strong>Debt Burden Impact:</strong> Grouping companies by finance cost quartiles showed median profit margin drops from <strong className="text-emerald-700 font-mono">3.04% in Q1</strong> (low debt) down to <strong className="text-rose-700 font-mono">1.32% in Q4</strong> (high debt), representing a 56.5% decline in operational profit.</span>
               </li>
             </ul>
           </div>

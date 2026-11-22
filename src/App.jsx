@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from './components/Header';
 import ProjectOneExcel from './components/ProjectOneExcel';
 import ProjectTwoFinance from './components/ProjectTwoFinance';
@@ -7,6 +7,22 @@ import Footer from './components/Footer';
 import { FileSpreadsheet, Database, Rocket, Sparkles } from 'lucide-react';
 
 export default function App() {
+  useEffect(() => {
+    // Direct project URLs use native hash links. Wait until React has mounted
+    // the project sections before scrolling to the requested section.
+    const hash = window.location.hash;
+    if (!hash) return;
+
+    const timer = window.setTimeout(() => {
+      document.getElementById(decodeURIComponent(hash.slice(1)))?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }, 100);
+
+    return () => window.clearTimeout(timer);
+  }, []);
+
   const scrollTo = (id) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -40,44 +56,44 @@ export default function App() {
 
           {/* Quick Jump Links with Color-Coordinated Accents */}
           <div className="pt-2 flex flex-wrap gap-2 text-xs">
-            <button
-              onClick={() => scrollTo('project-excel')}
+            <a
+              href="#project-excel"
               className="px-3 py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-100/80 text-emerald-900 border border-emerald-200/90 font-semibold transition-all flex items-center gap-1.5 shadow-2xs"
             >
               <FileSpreadsheet className="w-3.5 h-3.5 text-emerald-600" />
               <span>01. Global Trade Excel Model</span>
-            </button>
+            </a>
 
-            <button
-              onClick={() => scrollTo('project-finance')}
+            <a
+              href="#project-finance"
               className="px-3 py-1.5 rounded-lg bg-blue-50 hover:bg-blue-100/80 text-blue-900 border border-blue-200/90 font-semibold transition-all flex items-center gap-1.5 shadow-2xs"
             >
               <Database className="w-3.5 h-3.5 text-blue-600" />
               <span>02. Corporate Financial Pipeline</span>
-            </button>
+            </a>
 
-            <button
-              onClick={() => scrollTo('project-space')}
+            <a
+              href="#project-space"
               className="px-3 py-1.5 rounded-lg bg-purple-50 hover:bg-purple-100/80 text-purple-900 border border-purple-200/90 font-semibold transition-all flex items-center gap-1.5 shadow-2xs"
             >
               <Rocket className="w-3.5 h-3.5 text-purple-600" />
               <span>03. Space Mission Imputation Audit</span>
-            </button>
+            </a>
           </div>
         </div>
 
         {/* PROJECT 1: Global Trade Analytics & Data Quality Intelligence */}
-        <section id="project-excel">
+        <section id="project-excel" className="scroll-mt-24">
           <ProjectOneExcel />
         </section>
 
         {/* PROJECT 2: Automated Financial Intelligence Pipeline */}
-        <section id="project-finance">
+        <section id="project-finance" className="scroll-mt-24">
           <ProjectTwoFinance />
         </section>
 
         {/* PROJECT 3: Space Mission Exploratory Data Analysis & Imputation Audit */}
-        <section id="project-space">
+        <section id="project-space" className="scroll-mt-24">
           <ProjectThreeSpace />
         </section>
 

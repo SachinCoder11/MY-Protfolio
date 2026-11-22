@@ -1,0 +1,160 @@
+import React, { useState } from 'react';
+import { projectLinks } from '../config/projectLinks';
+import { 
+  FileSpreadsheet, 
+  Download, 
+  ExternalLink, 
+  ZoomIn, 
+  CheckCircle2, 
+  AlertCircle, 
+  Layers,
+  TrendingUp,
+  Table
+} from 'lucide-react';
+import ImageModal from './ImageModal';
+
+export default function ProjectOneExcel() {
+  const [modalOpen, setModalOpen] = useState(false);
+  const { globalTrade } = projectLinks;
+
+  return (
+    <article className="bg-white rounded-xl border border-slate-200 shadow-xs p-6 sm:p-8 space-y-6">
+      <ImageModal 
+        isOpen={modalOpen} 
+        onClose={() => setModalOpen(false)}
+        imageSrc={globalTrade.previewImage}
+        imageAlt="Executive Excel Dashboard Preview"
+        title="Global Trade Analytics — Audited 10-Sheet Executive Excel Model"
+      />
+
+      {/* Project Header & Badge */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-5">
+        <div>
+          <div className="flex items-center gap-2 mb-1.5">
+            <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-800 border border-emerald-200">
+              Microsoft Excel Portfolio Deliverable
+            </span>
+            <span className="text-xs text-slate-400 font-mono">01 of 03</span>
+          </div>
+          <h2 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
+            Global Trade Analytics & Data Quality Intelligence
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-500 font-medium mt-0.5">
+            Executive Excel Portfolio • Relational Modeling, Data Governance & Financial Auditing
+          </p>
+        </div>
+
+        {/* Primary Action Buttons */}
+        <div className="flex flex-wrap items-center gap-2.5 shrink-0">
+          <a
+            href={globalTrade.downloadUrl}
+            download="Global_Trade_Analytics_Executive_Portfolio.xlsx"
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-xs"
+          >
+            <Download className="w-4 h-4" />
+            <span>Download Excel Workbook ({globalTrade.fileSize})</span>
+          </a>
+
+          <a
+            href={globalTrade.googleDriveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-lg text-sm font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors border border-slate-200/60"
+          >
+            <span>Open in Google Drive</span>
+            <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
+          </a>
+        </div>
+      </div>
+
+      {/* Main Grid: Visual Screenshot Preview & Analytical Story */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        {/* Genuine Screenshot Preview */}
+        <div className="lg:col-span-5 space-y-2">
+          <div 
+            onClick={() => setModalOpen(true)}
+            className="group relative rounded-lg overflow-hidden border border-slate-200 bg-slate-50 cursor-pointer shadow-xs hover:border-blue-400 transition-all"
+          >
+            <img 
+              src={globalTrade.previewImage} 
+              alt="Global Trade Analytics Dashboard Preview" 
+              className="w-full h-auto object-cover group-hover:scale-102 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/30 transition-colors flex items-center justify-center">
+              <span className="opacity-0 group-hover:opacity-100 px-3 py-1.5 bg-slate-900/90 text-white text-xs font-semibold rounded-md flex items-center gap-1.5 transition-opacity shadow">
+                <ZoomIn className="w-3.5 h-3.5" />
+                <span>Click to Expand Dashboard Preview</span>
+              </span>
+            </div>
+          </div>
+          <p className="text-[11px] text-slate-500 text-center font-mono">
+            Actual dashboard screenshot from Sheet 09_Executive_Dashboard
+          </p>
+        </div>
+
+        {/* Concise Explanation */}
+        <div className="lg:col-span-7 space-y-5 text-sm text-slate-700 leading-relaxed">
+          
+          {/* Problem */}
+          <div>
+            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">
+              Business Problem & Data Flaw
+            </h3>
+            <p>
+              Fragmented international logistics records obscured regional profitability, while an automated ETL ingestion bug misclassified the North America destination region code <strong className="font-mono text-slate-900">"NA"</strong> as a null/missing value (<strong className="font-mono text-rose-600">#N/A</strong>). This silently dropped <strong className="text-slate-900 font-semibold">$86,214.30 across 87 orders</strong> from executive reporting.
+            </p>
+          </div>
+
+          {/* Solution & Implementation */}
+          <div>
+            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">
+              What Was Implemented in Excel
+            </h3>
+            <p>
+              Engineered a complete relational Excel workbook across <strong className="text-slate-900 font-semibold">10 linked worksheets</strong> analyzing 500 commercial transactions ($474,704.62 total sales, 28.14% operating margin). Sourced from an immutable baseline sheet (<strong className="font-mono text-xs">02_Raw_Trade_Data</strong>), normalized text, linked master dimension tables via <strong className="text-slate-900 font-semibold">11,007 dynamic formula cells</strong> (INDEX/MATCH, SUMIFS, AVERAGEIFS, XLOOKUP, tiered pricing logic), and remediated the NA bug without data loss.
+            </p>
+          </div>
+
+          {/* Key Findings */}
+          <div className="bg-slate-50 rounded-lg p-4 border border-slate-200/80 space-y-2">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-800 flex items-center gap-1.5">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+              <span>Key Audited Findings & Commercial Outputs</span>
+            </h4>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+              <li className="flex items-start gap-1.5">
+                <span className="text-blue-600 font-bold">•</span>
+                <span><strong>500 Transactions Audited:</strong> $474.7K gross sales, $133.6K operating profit.</span>
+              </li>
+              <li className="flex items-start gap-1.5">
+                <span className="text-blue-600 font-bold">•</span>
+                <span><strong>$86,214.30 Rescued:</strong> Restored 87 North American orders from null misclassification.</span>
+              </li>
+              <li className="flex items-start gap-1.5">
+                <span className="text-blue-600 font-bold">•</span>
+                <span><strong>Regional Logistics Disparity:</strong> Asia incurred $47.46 shipping/order vs Europe at $38.92.</span>
+              </li>
+              <li className="flex items-start gap-1.5">
+                <span className="text-blue-600 font-bold">•</span>
+                <span><strong>$1.36K Margin Gap:</strong> Quantified continental shipping surcharge leakage across 179 Asia shipments.</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Technologies */}
+          <div className="flex flex-wrap items-center gap-2 pt-1 text-xs">
+            <span className="text-slate-500 font-semibold uppercase text-[11px]">Technologies Used:</span>
+            <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">Microsoft Excel</span>
+            <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">Dynamic Formulas (INDEX/MATCH, XLOOKUP)</span>
+            <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">SUMIFS & AVERAGEIFS</span>
+            <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">Relational Data Modeling</span>
+            <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">KPI Dashboard</span>
+          </div>
+
+        </div>
+
+      </div>
+    </article>
+  );
+}

@@ -21,7 +21,7 @@ export default function ProjectOneExcel() {
         onClose={() => setModalOpen(false)}
         imageSrc={globalTrade.previewImage}
         imageAlt="Executive Excel Dashboard Preview"
-        title="Global Trade Analytics: Audited 10-Sheet Executive Excel Model"
+        title="Global Trade Analytics: 10-Sheet Excel Model"
       />
 
       {/* Project Header & Badge */}
@@ -37,7 +37,7 @@ export default function ProjectOneExcel() {
             Global Trade Analytics & Data Quality Intelligence
           </h2>
           <p className="text-xs sm:text-sm text-slate-500 font-medium mt-0.5">
-            Multi-Currency Trade Analysis • Relational Lookups, Data Cleansing & Financial Dashboards
+            Multi-Currency Trade Data • Relational Formulas, Data Cleaning & Dashboards
           </p>
         </div>
 
@@ -114,7 +114,7 @@ export default function ProjectOneExcel() {
             </div>
           </div>
           <p className="text-xs text-slate-500 text-center font-medium">
-            Actual dashboard view from the Executive Dashboard sheet in Excel
+            A preview of the executive dashboard sheet in the Excel workbook
           </p>
         </div>
 
@@ -124,20 +124,20 @@ export default function ProjectOneExcel() {
           {/* The Context & Problem */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-emerald-800 mb-1">
-              The Context & Challenge
+              The Problem: A Silent Data Bug
             </h3>
             <p>
-              This case study models an ETL ingestion defect that misclassified the North America region code <strong className="text-slate-900 font-semibold">"NA"</strong> as a missing null value (<strong className="text-rose-600 font-semibold">#N/A</strong>), hiding <strong className="text-slate-900 font-semibold">$86,214.30 across 87 orders</strong> from executive reporting.
+              In this project, I tackled a common data pipeline trap: the destination code <strong className="text-slate-900 font-semibold">"NA"</strong> for North America was automatically read as a missing null (<strong className="text-rose-600 font-semibold">#N/A</strong>). As a result, <strong className="text-slate-900 font-semibold">87 customer orders totaling $86,214</strong> disappeared from management reports without triggering an error.
             </p>
           </div>
 
           {/* Solution & Implementation */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-emerald-800 mb-1">
-              How I Solved It in Excel
+              How I Built the Solution
             </h3>
             <p>
-              Engineered a complete relational Excel workbook across <strong className="text-slate-900 font-semibold">10 linked worksheets</strong> analyzing 500 commercial transactions ($474,704.62 total sales, 28.14% operating margin). Sourced from an immutable baseline sheet (<strong className="text-xs text-slate-800 font-semibold">02_Raw_Trade_Data</strong>), normalized text, linked master dimension tables via <strong className="text-emerald-800 font-semibold">11,000+ dynamic formula cells</strong> (INDEX/MATCH, SUMIFS, AVERAGEIFS, XLOOKUP, tiered pricing logic), and resolved the NA bug without data loss.
+              I built a clean <strong className="text-slate-900 font-semibold">10-sheet Excel workbook</strong> to process all 500 orders ($474,704 in total sales). I preserved the raw data in an untouched baseline sheet (<strong className="text-xs text-slate-800 font-semibold">02_Raw_Trade_Data</strong>), cleaned up text inconsistencies, and connected product and region tables using dynamic formulas (INDEX/MATCH, XLOOKUP, SUMIFS). I then fixed the "NA" region bug so every single order was accurately accounted for.
             </p>
           </div>
 
@@ -145,34 +145,34 @@ export default function ProjectOneExcel() {
           <div className="bg-gradient-to-br from-emerald-50/60 to-teal-50/30 rounded-lg p-4 border border-emerald-200/80 space-y-2 shadow-2xs">
             <h4 className="text-xs font-bold uppercase tracking-wider text-emerald-900 flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-              <span>Key Findings & Business Impact</span>
+              <span>Key Takeaways & Findings</span>
             </h4>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
               <li className="flex items-start gap-1.5">
                 <span className="text-emerald-600 font-bold">•</span>
-                <span><strong>500 Orders Analyzed:</strong> $474.7K gross sales and $133.6K in operating profit.</span>
+                <span><strong>500 Orders Analyzed:</strong> $474.7K in total sales and $133.6K in operating profit across 6 continents.</span>
               </li>
               <li className="flex items-start gap-1.5">
                 <span className="text-emerald-600 font-bold">•</span>
-                <span><strong>$86,214 Recovered:</strong> Corrected the "NA" null bug, restoring 87 orders to reporting.</span>
+                <span><strong>$86,214 Restored:</strong> Fixing the region bug brought 87 missing North American orders back into executive reporting.</span>
               </li>
               <li className="flex items-start gap-1.5">
                 <span className="text-emerald-600 font-bold">•</span>
-                <span><strong>Freight Cost Disparity:</strong> Asia deliveries averaged $47.46/order vs Europe at $38.92.</span>
+                <span><strong>Shipping Costs:</strong> Shipping to Asia averaged $47.46 per order compared to $38.92 for European destinations.</span>
               </li>
               <li className="flex items-start gap-1.5">
                 <span className="text-emerald-600 font-bold">•</span>
-                <span><strong>$1.36K Margin Leakage:</strong> Quantified unrecovered continental shipping surcharges across 179 shipments.</span>
+                <span><strong>Unbilled Surcharges:</strong> Identified $1,360 in uncollected shipping fees across 179 shipments.</span>
               </li>
             </ul>
           </div>
 
           {/* Technologies */}
           <div className="flex flex-wrap items-center gap-2 pt-1 text-xs">
-            <span className="text-emerald-800/80 font-semibold uppercase text-[11px]">Tools & Techniques:</span>
+            <span className="text-emerald-800/80 font-semibold uppercase text-[11px]">Skills & Tools Used:</span>
             <span className="px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 font-medium border border-emerald-200/70">Microsoft Excel</span>
             <span className="px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 font-medium border border-emerald-200/70">Dynamic Lookups (INDEX/MATCH, XLOOKUP)</span>
-            <span className="px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 font-medium border border-emerald-200/70">SUMIFS & Multi-Criteria Aggregations</span>
+            <span className="px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 font-medium border border-emerald-200/70">SUMIFS & Aggregations</span>
             <span className="px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 font-medium border border-emerald-200/70">Relational Modeling</span>
             <span className="px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 font-medium border border-emerald-200/70">KPI Dashboard</span>
           </div>
@@ -186,10 +186,10 @@ export default function ProjectOneExcel() {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-emerald-900">
-              Individual Workbook Sections (Google Drive)
+              Explore Sections on Google Drive
             </h3>
             <p className="text-xs text-slate-500">
-              If you prefer quick browsing without downloading the full workbook, you can view each section separately on Google Drive:
+              If you want to quickly browse specific sheets without downloading the full 10-sheet file, you can open each section directly on Google Drive:
             </p>
           </div>
           <a

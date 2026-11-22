@@ -43,7 +43,7 @@ export default function App() {
         <div className="bg-gradient-to-br from-white via-white to-blue-50/30 rounded-xl border border-slate-200/90 p-6 sm:p-7 shadow-xs space-y-3">
           <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-200/80">
             <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-            <span>Featured Portfolio Work</span>
+            <span>Featured Projects</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
@@ -51,7 +51,7 @@ export default function App() {
           </h2>
 
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-3xl">
-            A practical look at three core analytics and engineering projects from my background, spanning advanced financial modeling in Excel, large-scale statutory corporate data pipelines in Python and SQL, and deep exploratory data audits. Each section includes working deliverables, source code repositories, and real takeaways.
+            A practical look at three real data projects I built, covering financial modeling in Excel, corporate data processing with Python and SQL, and exploratory data audits. You can explore the live deliverables, download the workbooks, or check out the source code on GitHub.
           </p>
 
           {/* Quick Jump Links with Color-Coordinated Accents */}

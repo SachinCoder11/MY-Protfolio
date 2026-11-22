@@ -39,11 +39,11 @@ export default function ProjectTwoFinance() {
           <div className="flex flex-wrap items-center gap-2 mb-1.5">
             <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-800 border border-emerald-200/90 flex items-center gap-1 shadow-2xs">
               <CheckCircle2 className="w-3 h-3 text-emerald-600" />
-              <span>Pipeline & Analytics: Complete</span>
+              <span>Data Pipeline: Complete</span>
             </span>
             <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-50 text-amber-800 border border-amber-200/90 flex items-center gap-1 shadow-2xs">
               <Clock className="w-3 h-3 text-amber-600" />
-              <span>Predictive Modeling: Next Phase</span>
+              <span>Next Phase: Outlier Explanations</span>
             </span>
             <span className="text-xs text-blue-700/80 font-medium">02 of 03</span>
           </div>
@@ -52,7 +52,7 @@ export default function ProjectTwoFinance() {
             Automated Financial Intelligence Pipeline
           </h2>
           <p className="text-xs sm:text-sm text-slate-500 font-medium mt-0.5">
-            Corporate P&L Analysis • Statutory MCA Filing Ingestion, Ratio Modeling & Anomaly Detection
+            Corporate P&L Analysis • Ingesting 96,000+ MCA filings, profitability ratios, and anomaly checks
           </p>
         </div>
 
@@ -111,7 +111,7 @@ export default function ProjectTwoFinance() {
           </div>
 
           <p className="md:col-span-2 text-xs text-slate-500 text-center font-medium">
-            Distribution and debt burden charts generated from MCA corporate filings
+            Charts showing profit margin distribution and debt burden across active operating companies
           </p>
         </div>
 
@@ -121,20 +121,20 @@ export default function ProjectTwoFinance() {
           {/* Problem */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-blue-800 mb-1">
-              The Challenge: Noisy Regulatory Filings
+              The Problem: Messy and Incomplete Regulatory Filings
             </h3>
             <p>
-              Corporate financial returns from the Ministry of Corporate Affairs (MCA) contained over <strong className="text-slate-900 font-semibold">7 million missing values across 130 attributes</strong>, combined with non-standard reporting periods and extreme reporting outliers that distort ordinary industry benchmarks.
+              Corporate financial returns from the Ministry of Corporate Affairs (MCA) were extremely noisy. Across 130 reported attributes, there were over <strong className="text-slate-900 font-semibold">7 million missing values</strong>, non-standard fiscal reporting periods, and extreme outliers that distort ordinary industry averages.
             </p>
           </div>
 
           {/* Solution & Completed Implementation */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-blue-800 mb-1">
-              Data Pipeline & Analytical Approach
+              How I Cleaned and Analyzed the Data
             </h3>
             <p>
-              Cleaned 96,632 raw MCA XBRL records using <strong className="text-slate-900 font-semibold">Python (Pandas, NumPy) and MySQL</strong>. Pruned 16 completely empty (100% null) attributes, isolated active companies for FY 2024–25, calculated deterministic financial ratios (Profit Margin, Expense Ratio, Finance Cost Ratio), and engineered an Interquartile Range (IQR) anomaly detection pipeline.
+              I loaded 96,632 raw MCA records into <strong className="text-slate-900 font-semibold">Python (Pandas, NumPy) and MySQL</strong>. After dropping 16 columns that were completely blank, I isolated companies actively filing for FY 2024–25, calculated core profitability and expense ratios, and built an Interquartile Range (IQR) anomaly workflow to flag unusual numbers for audit.
             </p>
           </div>
 
@@ -143,18 +143,18 @@ export default function ProjectTwoFinance() {
             <div className="flex items-center justify-between border-b border-slate-200/70 pb-1.5">
               <span className="font-bold text-slate-800 uppercase tracking-wider text-[11px] flex items-center gap-1.5">
                 <FileText className="w-3.5 h-3.5 text-blue-600" />
-                Data Source & Processing Lineage
+                Where the Data Came From
               </span>
               <span className="text-[11px] font-semibold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200/70">
-                Official MCA Public Filings
+                Official MCA Filings
               </span>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-slate-600 leading-relaxed">
               <div>
-                <span className="font-semibold text-slate-800">• Source:</span> Annual corporate Profit & Loss XBRL returns from the <strong>Ministry of Corporate Affairs (MCA)</strong> repository, matched with official company master records.
+                <span className="font-semibold text-slate-800">• Source:</span> Annual corporate Profit & Loss filings from the <strong>Ministry of Corporate Affairs (MCA)</strong> repository, matched with official company master records.
               </div>
               <div>
-                <span className="font-semibold text-slate-800">• Processing:</span> Cleaned 96,632 batch filings in Python, pruned 16 all-null columns, filtered for fiscal year 2024–25 (48,068 records), and removed inactive shell companies to isolate 45,414 revenue-generating firms.
+                <span className="font-semibold text-slate-800">• Processing:</span> Processed 96,632 raw filings in Python, dropped 16 empty columns, filtered to FY 2024–25 (48,068 records), and isolated 45,414 actively operating companies with positive revenue.
               </div>
             </div>
           </div>
@@ -163,11 +163,11 @@ export default function ProjectTwoFinance() {
           <div className="bg-gradient-to-br from-blue-50/60 to-indigo-50/30 rounded-lg p-4 border border-blue-200/80 space-y-3 shadow-2xs">
             <h4 className="text-xs font-bold uppercase tracking-wider text-blue-900 flex items-center gap-1.5">
               <BarChart3 className="w-4 h-4 text-blue-600" />
-              <span>What the Data Revealed</span>
+              <span>What the Data Showed</span>
             </h4>
             
             <p className="text-xs text-slate-600">
-              Unlike textbook bell curves, actual statutory corporate profitability clusters tightly around zero with long positive and negative tails:
+              Unlike theoretical bell curves, actual company profitability clusters heavily around zero with long tails on both ends:
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-center text-xs py-1">
@@ -185,36 +185,36 @@ export default function ProjectTwoFinance() {
               </div>
             </div>
             <p className="text-[11px] text-slate-600">
-              Profitability counts use all 48,068 current-FY filings; financial-ratio and debt-burden analysis uses the 45,414 revenue-positive firms.
+              The breakdown above includes all 48,068 filings for the year; ratio calculations and debt comparisons focus on the 45,414 companies with active revenue.
             </p>
 
             <ul className="space-y-1.5 text-xs text-slate-700">
               <li className="flex items-start gap-1.5">
                 <span className="text-blue-600 font-bold">•</span>
-                <span><strong>Median vs. Mean:</strong> Extreme skewness makes averages deceptive. The true median profit margin across active operating companies is <strong className="text-slate-900 font-semibold">1.81%</strong>.</span>
+                <span><strong>Median vs. Mean:</strong> Because extreme outliers distort simple averages, the median gives a much truer picture. The actual median profit margin across operating businesses is <strong className="text-slate-900 font-semibold">1.81%</strong>.</span>
               </li>
               <li className="flex items-start gap-1.5">
                 <span className="text-blue-600 font-bold">•</span>
-                <span><strong>Outlier Detection (11,410 flagged):</strong> Identified 11,410 companies beyond 1.5× IQR fences. In financial auditing, extreme swings often indicate one-time write-downs or sudden debt spikes, making it critical to flag rather than discard them.</span>
+                <span><strong>Outliers (11,410 flagged):</strong> Flagged 11,410 companies outside 1.5× IQR fences. In financial auditing, extreme swings often represent real events like large write-downs or sharp debt increases, so flagging them for inspection is far safer than deleting them.</span>
               </li>
               <li className="flex items-start gap-1.5">
                 <span className="text-blue-600 font-bold">•</span>
-                <span><strong>Debt Burden Impact:</strong> Grouping companies by finance cost quartiles showed median profit margin drops from <strong className="text-emerald-700 font-semibold">3.04% in Q1</strong> (low debt) down to <strong className="text-rose-700 font-semibold">1.32% in Q4</strong> (high debt), representing a 56.5% decline in operational profit.</span>
+                <span><strong>Debt Burden Impact:</strong> Splitting companies by borrowing costs revealed a clear impact on profitability. Median profit margin fell from <strong className="text-emerald-700 font-semibold">3.04% for low-debt companies (Q1)</strong> down to <strong className="text-rose-700 font-semibold">1.32% for high-debt companies (Q4)</strong>, a 56% reduction in operational margin.</span>
               </li>
             </ul>
           </div>
 
           {/* Current Status Note */}
           <div className="bg-amber-50/80 p-3 rounded-lg border border-amber-200/80 text-xs text-amber-950 shadow-2xs">
-            <strong className="text-amber-900">Current Status:</strong> Ingestion, data cleaning, financial ratio calculations, and statistical anomaly detection are complete. Next, I plan to build an automated summarizer to explain why specific outliers occurred in plain language.
+            <strong className="text-amber-900">Current Status:</strong> Ingestion, data cleaning, ratio calculations, and statistical anomaly detection are complete. Next, I plan to build an automated summarizer to explain why specific outliers occurred in plain language.
           </div>
 
           {/* Technologies */}
           <div className="flex flex-wrap items-center gap-2 pt-1 text-xs">
-            <span className="text-blue-800/80 font-semibold uppercase text-[11px]">Core Tech & Tools:</span>
+            <span className="text-blue-800/80 font-semibold uppercase text-[11px]">Skills & Tools Used:</span>
             <span className="px-2 py-0.5 rounded bg-blue-50 text-blue-900 font-medium border border-blue-200/70">Python (Pandas, NumPy)</span>
             <span className="px-2 py-0.5 rounded bg-blue-50 text-blue-900 font-medium border border-blue-200/70">MySQL</span>
-            <span className="px-2 py-0.5 rounded bg-blue-50 text-blue-900 font-medium border border-blue-200/70">Statistical Modeling</span>
+            <span className="px-2 py-0.5 rounded bg-blue-50 text-blue-900 font-medium border border-blue-200/70">Statistical Analysis</span>
             <span className="px-2 py-0.5 rounded bg-blue-50 text-blue-900 font-medium border border-blue-200/70">IQR Anomaly Detection</span>
             <span className="px-2 py-0.5 rounded bg-blue-50 text-blue-900 font-medium border border-blue-200/70">Matplotlib & Seaborn</span>
           </div>

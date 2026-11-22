@@ -36,7 +36,7 @@ export default function ProjectThreeSpace() {
             Space Mission Exploratory Data Analysis & Imputation Audit
           </h2>
           <p className="text-xs sm:text-sm text-slate-500 font-medium mt-0.5">
-            Historical Aerospace Trends (1957–2020) • Missing Data Analysis & Launch Price Segmentation
+            Historical Space Flights (1957 to 2020) • Handling Missing Costs & Launch Price Segmentation
           </p>
         </div>
 
@@ -77,7 +77,7 @@ export default function ProjectThreeSpace() {
             </div>
           </div>
           <p className="text-xs text-slate-500 text-center font-medium">
-            Launch frequency and budget missingness patterns across 4,324 space missions
+            Launch volume and missing cost patterns across 4,324 space missions
           </p>
         </div>
 
@@ -87,23 +87,23 @@ export default function ProjectThreeSpace() {
           {/* The Challenge */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-purple-800 mb-1">
-              The Challenge: Massive Historical Data Gaps
+              The Problem: Decades of Missing Budget Records
             </h3>
             <p>
-              Aerospace mission records spanning seven decades (1957–2020) have substantial financial gaps: <strong className="text-slate-900 font-semibold">77.7% of all missions (3,360 out of 4,324) lack published launch costs</strong> due to classified defense programs, proprietary commercial contracts, and unstandardized historical record-keeping.
+              Looking at space missions between 1957 and 2020, financial data is missing for nearly 78% of all flights (<strong className="text-slate-900 font-semibold">3,360 out of 4,324 missions</strong>). This happens because many military missions were classified, commercial contracts were confidential, and older records simply were not published.
             </p>
           </div>
 
           {/* Solution & Imputation Audit */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-purple-800 mb-1">
-              Why Simple Mean Imputation Failed & How I Fixed It
+              Why Filling in Missing Values with Averages Failed
             </h3>
             <p>
-              Standard automated tools often fill missing numerical fields with the dataset's global mean ($153.8M). Here, doing that mathematically introduced <strong className="text-rose-700 font-semibold">false $5,000M cost cluster artifacts</strong>, distorting decade-by-decade variance calculations by over 240%.
+              Standard automated tools often fill in missing numbers with the overall average ($153.8M). When applied here, that created artificial cost spikes and distorted decade-over-decade trends by more than <strong className="text-rose-700 font-semibold">240%</strong>.
             </p>
             <p className="mt-2">
-              Instead of blindly guessing missing figures, I created a <strong className="text-slate-900 font-semibold">price-band segmentation model</strong> based on payload mass, target orbit, and launcher propulsion class, quarantining sparse records cleanly without corrupting true historical benchmarks.
+              Instead of guessing missing numbers, I grouped launches into <strong className="text-slate-900 font-semibold">price bands</strong> based on rocket capacity, destination orbit, and time period. This allowed us to study trends without letting missing values corrupt real numbers.
             </p>
           </div>
 
@@ -111,16 +111,16 @@ export default function ProjectThreeSpace() {
           <div className="bg-gradient-to-br from-purple-50/60 to-pink-50/30 rounded-lg p-4 border border-purple-200/80 space-y-2 shadow-2xs">
             <h4 className="text-xs font-bold uppercase tracking-wider text-purple-900 flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-purple-600" />
-              <span>Key Insights & Takeaways</span>
+              <span>Key Takeaways & Findings</span>
             </h4>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
               <li className="flex items-start gap-1.5">
                 <span className="text-purple-600 font-bold">•</span>
-                <span><strong>4,324 Missions Analyzed:</strong> 964 had disclosed budgets, while 3,360 required dedicated missingness handling.</span>
+                <span><strong>4,324 Missions Audited:</strong> 964 had disclosed budgets, while 3,360 were cleanly cataloged as missing.</span>
               </li>
               <li className="flex items-start gap-1.5">
                 <span className="text-purple-600 font-bold">•</span>
-                <span><strong>Extreme Cost Variance:</strong> Disclosed mission costs ranged from $5.3M (small commercial launchers) to $5,000M (Apollo/Saturn V).</span>
+                <span><strong>Massive Cost Spread:</strong> Disclosed mission budgets ranged from $5.3M for small commercial rockets to $5,000M for Apollo/Saturn V launches.</span>
               </li>
               <li className="flex items-start gap-1.5">
                 <span className="text-purple-600 font-bold">•</span>
@@ -128,14 +128,14 @@ export default function ProjectThreeSpace() {
               </li>
               <li className="flex items-start gap-1.5">
                 <span className="text-purple-600 font-bold">•</span>
-                <span><strong>Data Quality Rule:</strong> Proved that datasets with high sparsity (&gt;50% missing values) require transparent segmentation rather than automatic imputation.</span>
+                <span><strong>Practical Takeaway:</strong> When more than half of a column is missing, automatic imputation distorts reality. Grouping and transparent segmentation give much more reliable results.</span>
               </li>
             </ul>
           </div>
 
           {/* Technologies */}
           <div className="flex flex-wrap items-center gap-2 pt-1 text-xs">
-            <span className="text-purple-800/80 font-semibold uppercase text-[11px]">Core Tech & Tools:</span>
+            <span className="text-purple-800/80 font-semibold uppercase text-[11px]">Skills & Tools Used:</span>
             <span className="px-2 py-0.5 rounded bg-purple-50 text-purple-900 font-medium border border-purple-200/70">Microsoft Excel</span>
             <span className="px-2 py-0.5 rounded bg-purple-50 text-purple-900 font-medium border border-purple-200/70">Python (Pandas, NumPy)</span>
             <span className="px-2 py-0.5 rounded bg-purple-50 text-purple-900 font-medium border border-purple-200/70">Descriptive Statistics</span>

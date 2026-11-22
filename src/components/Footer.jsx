@@ -39,10 +39,10 @@ export default function Footer() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-slate-400">
         <div>
-          All metrics, formulas, and visualizations are built directly from project datasets and source repositories.
+          All figures, formulas, and charts come directly from the original project datasets and source code.
         </div>
         <div className="font-medium text-slate-500">
-          Analytics & Engineering Showcase
+          Selected Data Projects
         </div>
       </div>
     </footer>

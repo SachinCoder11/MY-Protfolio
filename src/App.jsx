@@ -13,15 +13,18 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-600 selection:text-white flex flex-col">
+    <div className="min-h-screen bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-600 selection:text-white flex flex-col relative overflow-hidden">
+      {/* Subtle ambient background glow */}
+      <div className="absolute top-0 inset-x-0 h-96 bg-gradient-to-b from-blue-50/50 via-indigo-50/20 to-transparent pointer-events-none" />
+      
       {/* Minimal Header */}
       <Header />
 
       {/* Main Content Area */}
-      <main className="flex-1 max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12 w-full space-y-8">
+      <main className="relative flex-1 max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12 w-full space-y-8">
         
         {/* Showcase Intro Banner */}
-        <div className="bg-white rounded-xl border border-slate-200 p-6 sm:p-7 shadow-2xs space-y-3">
+        <div className="bg-gradient-to-br from-white via-white to-blue-50/30 rounded-xl border border-slate-200/90 p-6 sm:p-7 shadow-xs space-y-3">
           <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-200/80">
             <ShieldCheck className="w-3.5 h-3.5 text-blue-600" />
             <span>Audited Resume Evidence Deliverables</span>
@@ -35,11 +38,11 @@ export default function App() {
             This technical showcase provides direct access to the three projects listed under <strong className="text-slate-900 font-semibold">Featured Analytics Projects</strong> on my resume. Every metric, statistical finding, formula count, and code repository is audited directly against original project files.
           </p>
 
-          {/* Quick Jump Links */}
+          {/* Quick Jump Links with Color-Coordinated Accents */}
           <div className="pt-2 flex flex-wrap gap-2 text-xs">
             <button
               onClick={() => scrollTo('project-excel')}
-              className="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium transition-colors flex items-center gap-1.5"
+              className="px-3 py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-100/80 text-emerald-900 border border-emerald-200/90 font-semibold transition-all flex items-center gap-1.5 shadow-2xs"
             >
               <FileSpreadsheet className="w-3.5 h-3.5 text-emerald-600" />
               <span>01. Global Trade Excel Model</span>
@@ -47,7 +50,7 @@ export default function App() {
 
             <button
               onClick={() => scrollTo('project-finance')}
-              className="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium transition-colors flex items-center gap-1.5"
+              className="px-3 py-1.5 rounded-lg bg-blue-50 hover:bg-blue-100/80 text-blue-900 border border-blue-200/90 font-semibold transition-all flex items-center gap-1.5 shadow-2xs"
             >
               <Database className="w-3.5 h-3.5 text-blue-600" />
               <span>02. Corporate Financial Pipeline</span>
@@ -55,7 +58,7 @@ export default function App() {
 
             <button
               onClick={() => scrollTo('project-space')}
-              className="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium transition-colors flex items-center gap-1.5"
+              className="px-3 py-1.5 rounded-lg bg-purple-50 hover:bg-purple-100/80 text-purple-900 border border-purple-200/90 font-semibold transition-all flex items-center gap-1.5 shadow-2xs"
             >
               <Rocket className="w-3.5 h-3.5 text-purple-600" />
               <span>03. Space Mission Imputation Audit</span>

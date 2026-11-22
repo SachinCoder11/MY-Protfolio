@@ -6,39 +6,39 @@ export default function Footer() {
   const { candidate } = projectLinks;
 
   return (
-    <footer className="border-t border-slate-200 bg-white mt-16 py-8 text-xs text-slate-500">
+    <footer className="border-t border-slate-200/80 bg-white/80 backdrop-blur-xs mt-16 py-8 text-xs text-slate-500">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>
-          <div className="font-semibold text-slate-800">
+          <div className="font-bold text-slate-900 text-sm">
             {candidate.name}
           </div>
-          <div className="mt-0.5">
-            Navi Mumbai, Maharashtra, India • {candidate.email}
+          <div className="mt-0.5 text-slate-500">
+            Navi Mumbai, Maharashtra, India • <a href={`mailto:${candidate.email}`} className="text-blue-600 hover:underline">{candidate.email}</a>
           </div>
         </div>
 
-        <div className="flex items-center gap-4 text-xs font-medium">
+        <div className="flex items-center gap-4 text-xs font-semibold">
           <a
             href={candidate.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-slate-900 transition-colors"
+            className="text-slate-700 hover:text-slate-900 transition-colors"
           >
             GitHub Profile
           </a>
-          <span>•</span>
+          <span className="text-slate-300">•</span>
           <a
             href={candidate.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-700 transition-colors"
+            className="text-blue-700 hover:text-blue-800 transition-colors"
           >
             LinkedIn Profile
           </a>
-          <span>•</span>
+          <span className="text-slate-300">•</span>
           <a
             href={`mailto:${candidate.email}`}
-            className="hover:text-blue-700 transition-colors"
+            className="text-emerald-700 hover:text-emerald-800 transition-colors"
           >
             Email Me
           </a>
@@ -50,8 +50,8 @@ export default function Footer() {
           <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
           <span>Every number and deliverable audited against original project files and statutory records.</span>
         </div>
-        <div>
-          Resume Featured Analytics Projects Showcase
+        <div className="font-medium text-slate-500">
+          Featured Analytics Projects Showcase
         </div>
       </div>
     </footer>

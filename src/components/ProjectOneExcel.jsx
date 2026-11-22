@@ -10,7 +10,6 @@ import {
   Layers,
   TrendingUp,
   Table,
-  Folder,
   FolderOpen,
   Info
 } from 'lucide-react';
@@ -21,7 +20,7 @@ export default function ProjectOneExcel() {
   const { globalTrade } = projectLinks;
 
   return (
-    <article className="bg-white rounded-xl border border-slate-200 shadow-xs p-6 sm:p-8 space-y-6">
+    <article className="bg-gradient-to-b from-white via-white to-emerald-50/20 rounded-xl border border-emerald-900/10 shadow-xs hover:border-emerald-500/30 transition-all p-6 sm:p-8 space-y-6">
       <ImageModal 
         isOpen={modalOpen} 
         onClose={() => setModalOpen(false)}
@@ -34,10 +33,10 @@ export default function ProjectOneExcel() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-5">
         <div>
           <div className="flex items-center gap-2 mb-1.5">
-            <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-800 border border-emerald-200">
+            <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-800 border border-emerald-200/90 shadow-2xs">
               Microsoft Excel Deliverable
             </span>
-            <span className="text-xs text-slate-400 font-mono">01 of 03</span>
+            <span className="text-xs text-emerald-700/70 font-mono font-semibold">01 of 03</span>
           </div>
           <h2 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
             Global Trade Analytics & Data Quality Intelligence
@@ -52,7 +51,7 @@ export default function ProjectOneExcel() {
           <a
             href={globalTrade.downloadUrl}
             download="Global_Trade_Analytics_Executive_Portfolio.xlsx"
-            className="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-xs"
+            className="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 transition-colors shadow-xs"
           >
             <Download className="w-4 h-4" />
             <span>Download Master (.xlsx)</span>
@@ -62,7 +61,7 @@ export default function ProjectOneExcel() {
             href={globalTrade.googleDriveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3 py-2.5 rounded-lg text-xs sm:text-sm font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors border border-slate-200/60"
+            className="inline-flex items-center gap-1.5 px-3 py-2.5 rounded-lg text-xs sm:text-sm font-medium text-slate-700 bg-white hover:bg-slate-50 transition-colors border border-slate-200/80 shadow-2xs"
           >
             <span>Open in Google Drive</span>
             <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
@@ -72,27 +71,27 @@ export default function ProjectOneExcel() {
             href={globalTrade.googleDriveFolderUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3 py-2.5 rounded-lg text-xs sm:text-sm font-medium text-blue-700 bg-blue-50 hover:bg-blue-100 transition-colors border border-blue-200/60"
+            className="inline-flex items-center gap-1.5 px-3 py-2.5 rounded-lg text-xs sm:text-sm font-medium text-emerald-800 bg-emerald-50/80 hover:bg-emerald-100 transition-colors border border-emerald-200/80 shadow-2xs"
           >
-            <FolderOpen className="w-3.5 h-3.5 text-blue-600" />
+            <FolderOpen className="w-3.5 h-3.5 text-emerald-600" />
             <span>Browse Drive Folder</span>
           </a>
         </div>
       </div>
 
       {/* Helpful Drive Navigation & Access Notice */}
-      <div className="bg-blue-50/70 border border-blue-200/80 rounded-lg p-3 text-xs text-blue-900 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+      <div className="bg-emerald-50/70 border border-emerald-200/80 rounded-lg p-3 text-xs text-emerald-950 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 shadow-2xs">
         <div className="flex items-start gap-2">
-          <Info className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+          <Info className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
           <span>
-            <strong>Drive Viewing Note:</strong> When inspecting in Google Drive web preview, use the <strong>worksheet tabs along the bottom bar</strong> to switch sheets. Download the file to open natively in Microsoft Excel with interactive formulas and VBA macros.
+            <strong className="text-emerald-900">Drive Viewing Note:</strong> When inspecting in Google Drive web preview, use the <strong>worksheet tabs along the bottom bar</strong> to switch sheets. Download the file to open natively in Microsoft Excel with interactive formulas and VBA macros.
           </span>
         </div>
         <a 
           href={globalTrade.googleDriveFolderUrl} 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="font-semibold text-blue-700 hover:text-blue-900 underline shrink-0 whitespace-nowrap text-xs"
+          className="font-bold text-emerald-700 hover:text-emerald-900 underline shrink-0 whitespace-nowrap text-xs"
         >
           View All Drive Parts →
         </a>
@@ -105,7 +104,7 @@ export default function ProjectOneExcel() {
         <div className="lg:col-span-5 space-y-2">
           <div 
             onClick={() => setModalOpen(true)}
-            className="group relative rounded-lg overflow-hidden border border-slate-200 bg-slate-50 cursor-pointer shadow-xs hover:border-blue-400 transition-all"
+            className="group relative rounded-lg overflow-hidden border border-emerald-200/70 bg-slate-50 cursor-pointer shadow-xs hover:border-emerald-400 transition-all"
           >
             <img 
               src={globalTrade.previewImage} 
@@ -129,7 +128,7 @@ export default function ProjectOneExcel() {
           
           {/* Problem */}
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-emerald-800 mb-1">
               Business Problem & Data Flaw
             </h3>
             <p>
@@ -139,35 +138,35 @@ export default function ProjectOneExcel() {
 
           {/* Solution & Implementation */}
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-emerald-800 mb-1">
               What Was Implemented in Excel
             </h3>
             <p>
-              Engineered a complete relational Excel workbook across <strong className="text-slate-900 font-semibold">11 linked worksheets</strong> analyzing 500 commercial transactions ($474,704.62 total sales, 28.14% operating margin). Sourced from an immutable baseline sheet (<strong className="font-mono text-xs">02_Raw_Trade_Data</strong>), normalized text, linked master dimension tables via <strong className="text-slate-900 font-semibold">11,000+ dynamic formula cells</strong> (INDEX/MATCH, SUMIFS, AVERAGEIFS, XLOOKUP, tiered pricing logic), and remediated the NA bug without data loss.
+              Engineered a complete relational Excel workbook across <strong className="text-slate-900 font-semibold">11 linked worksheets</strong> analyzing 500 commercial transactions ($474,704.62 total sales, 28.14% operating margin). Sourced from an immutable baseline sheet (<strong className="font-mono text-xs text-slate-800">02_Raw_Trade_Data</strong>), normalized text, linked master dimension tables via <strong className="text-emerald-800 font-semibold">11,000+ dynamic formula cells</strong> (INDEX/MATCH, SUMIFS, AVERAGEIFS, XLOOKUP, tiered pricing logic), and remediated the NA bug without data loss.
             </p>
           </div>
 
           {/* Key Findings */}
-          <div className="bg-slate-50 rounded-lg p-4 border border-slate-200/80 space-y-2">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-800 flex items-center gap-1.5">
+          <div className="bg-gradient-to-br from-emerald-50/60 to-teal-50/30 rounded-lg p-4 border border-emerald-200/80 space-y-2 shadow-2xs">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-emerald-900 flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-emerald-600" />
               <span>Key Audited Findings & Commercial Outputs</span>
             </h4>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
               <li className="flex items-start gap-1.5">
-                <span className="text-blue-600 font-bold">•</span>
+                <span className="text-emerald-600 font-bold">•</span>
                 <span><strong>500 Transactions Audited:</strong> $474.7K gross sales, $133.6K operating profit.</span>
               </li>
               <li className="flex items-start gap-1.5">
-                <span className="text-blue-600 font-bold">•</span>
+                <span className="text-emerald-600 font-bold">•</span>
                 <span><strong>$86,214.30 Rescued:</strong> Restored 87 North American orders from null misclassification.</span>
               </li>
               <li className="flex items-start gap-1.5">
-                <span className="text-blue-600 font-bold">•</span>
+                <span className="text-emerald-600 font-bold">•</span>
                 <span><strong>Regional Logistics Disparity:</strong> Asia incurred $47.46 shipping/order vs Europe at $38.92.</span>
               </li>
               <li className="flex items-start gap-1.5">
-                <span className="text-blue-600 font-bold">•</span>
+                <span className="text-emerald-600 font-bold">•</span>
                 <span><strong>$1.36K Margin Gap:</strong> Quantified continental shipping surcharge leakage across 179 Asia shipments.</span>
               </li>
             </ul>
@@ -175,12 +174,12 @@ export default function ProjectOneExcel() {
 
           {/* Technologies */}
           <div className="flex flex-wrap items-center gap-2 pt-1 text-xs">
-            <span className="text-slate-500 font-semibold uppercase text-[11px]">Technologies Used:</span>
-            <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">Microsoft Excel</span>
-            <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">Dynamic Formulas (INDEX/MATCH, XLOOKUP)</span>
-            <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">SUMIFS & AVERAGEIFS</span>
-            <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">Relational Data Modeling</span>
-            <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">KPI Dashboard</span>
+            <span className="text-emerald-800/80 font-semibold uppercase text-[11px]">Technologies Used:</span>
+            <span className="px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 font-medium border border-emerald-200/70">Microsoft Excel</span>
+            <span className="px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 font-medium border border-emerald-200/70">Dynamic Formulas (INDEX/MATCH, XLOOKUP)</span>
+            <span className="px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 font-medium border border-emerald-200/70">SUMIFS & AVERAGEIFS</span>
+            <span className="px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 font-medium border border-emerald-200/70">Relational Data Modeling</span>
+            <span className="px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 font-medium border border-emerald-200/70">KPI Dashboard</span>
           </div>
 
         </div>
@@ -188,21 +187,21 @@ export default function ProjectOneExcel() {
       </div>
 
       {/* Divided Modular Chunks for Easy Drive Viewing */}
-      <div className="border-t border-slate-100 pt-5 space-y-3">
+      <div className="border-t border-emerald-100 pt-5 space-y-3">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-600">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-emerald-900">
               Divided Project Workbooks (Modular Google Drive Chunks)
             </h3>
             <p className="text-xs text-slate-500">
-              For lightweight inspection, the full project is also organized into three dedicated modular workbooks on Google Drive:
+              For lightweight inspection, the full project is organized into three dedicated modular workbooks on Google Drive:
             </p>
           </div>
           <a
             href={globalTrade.googleDriveFolderUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs font-semibold text-blue-600 hover:text-blue-800 flex items-center gap-1 shrink-0"
+            className="text-xs font-semibold text-emerald-700 hover:text-emerald-900 flex items-center gap-1 shrink-0"
           >
             <span>Open All in Google Drive</span>
             <ExternalLink className="w-3 h-3" />
@@ -213,13 +212,13 @@ export default function ProjectOneExcel() {
           {globalTrade.parts.map((part) => (
             <div 
               key={part.id}
-              className="p-3 rounded-lg border border-slate-200 bg-slate-50/60 hover:bg-slate-50 transition-colors flex flex-col justify-between space-y-2.5"
+              className="p-3 rounded-lg border border-emerald-200/70 bg-gradient-to-b from-white to-emerald-50/30 hover:border-emerald-300 transition-colors flex flex-col justify-between space-y-2.5 shadow-2xs"
             >
               <div>
                 <div className="font-semibold text-xs text-slate-800">
                   {part.label}
                 </div>
-                <div className="text-[11px] text-slate-500 mt-0.5">
+                <div className="text-[11px] text-emerald-800/80 mt-0.5">
                   Sheets: {part.sheets}
                 </div>
               </div>
@@ -229,7 +228,7 @@ export default function ProjectOneExcel() {
                   href={part.driveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 text-center py-1.5 px-2 rounded bg-white hover:bg-slate-100 text-slate-700 font-medium border border-slate-200 shadow-2xs transition-colors flex items-center justify-center gap-1"
+                  className="flex-1 text-center py-1.5 px-2 rounded bg-white hover:bg-emerald-50/50 text-slate-700 font-medium border border-slate-200/80 shadow-2xs transition-colors flex items-center justify-center gap-1"
                 >
                   <span>Drive Preview</span>
                   <ExternalLink className="w-3 h-3 text-slate-400" />
@@ -238,7 +237,7 @@ export default function ProjectOneExcel() {
                 <a
                   href={part.downloadUrl}
                   download
-                  className="py-1.5 px-2 rounded bg-slate-200/80 hover:bg-slate-300 text-slate-700 font-medium transition-colors"
+                  className="py-1.5 px-2 rounded bg-emerald-100/70 hover:bg-emerald-200 text-emerald-800 font-medium transition-colors"
                   title="Download .xlsx file"
                 >
                   <Download className="w-3.5 h-3.5" />

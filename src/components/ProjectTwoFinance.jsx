@@ -24,7 +24,7 @@ export default function ProjectTwoFinance() {
   };
 
   return (
-    <article className="bg-white rounded-xl border border-slate-200 shadow-xs p-6 sm:p-8 space-y-6">
+    <article className="bg-gradient-to-b from-white via-white to-blue-50/20 rounded-xl border border-blue-900/10 shadow-xs hover:border-blue-500/30 transition-all p-6 sm:p-8 space-y-6">
       {activeImage && (
         <ImageModal 
           isOpen={modalOpen} 
@@ -39,15 +39,15 @@ export default function ProjectTwoFinance() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 pb-5">
         <div>
           <div className="flex flex-wrap items-center gap-2 mb-1.5">
-            <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-800 border border-emerald-200 flex items-center gap-1">
+            <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-50 text-emerald-800 border border-emerald-200/90 flex items-center gap-1 shadow-2xs">
               <CheckCircle2 className="w-3 h-3 text-emerald-600" />
               <span>Data Pipeline & Statistical Analysis: Completed</span>
             </span>
-            <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-50 text-amber-800 border border-amber-200 flex items-center gap-1">
+            <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-50 text-amber-800 border border-amber-200/90 flex items-center gap-1 shadow-2xs">
               <Clock className="w-3 h-3 text-amber-600" />
               <span>AI/ML Model Development: In Progress</span>
             </span>
-            <span className="text-xs text-slate-400 font-mono">02 of 03</span>
+            <span className="text-xs text-blue-700/70 font-mono font-semibold">02 of 03</span>
           </div>
 
           <h2 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
@@ -64,11 +64,11 @@ export default function ProjectTwoFinance() {
             href={financialPipeline.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold text-white bg-slate-900 hover:bg-slate-800 transition-colors shadow-xs"
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors shadow-xs"
           >
             <Github className="w-4 h-4" />
             <span>View GitHub Repository</span>
-            <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
+            <ExternalLink className="w-3.5 h-3.5 text-blue-200" />
           </a>
         </div>
       </div>
@@ -80,7 +80,7 @@ export default function ProjectTwoFinance() {
         <div className="lg:col-span-5 space-y-3">
           <div 
             onClick={() => handleOpenImage(financialPipeline.distributionImage, "Profit Margin Distribution & Skewness across 45,414 Firms")}
-            className="group relative rounded-lg overflow-hidden border border-slate-200 bg-slate-50 cursor-pointer shadow-xs hover:border-blue-400 transition-all"
+            className="group relative rounded-lg overflow-hidden border border-blue-200/70 bg-slate-50 cursor-pointer shadow-xs hover:border-blue-400 transition-all"
           >
             <img 
               src={financialPipeline.distributionImage} 
@@ -97,7 +97,7 @@ export default function ProjectTwoFinance() {
 
           <div 
             onClick={() => handleOpenImage(financialPipeline.debtBurdenImage, "Debt Burden Quartiles vs Median Profit Margin")}
-            className="group relative rounded-lg overflow-hidden border border-slate-200 bg-slate-50 cursor-pointer shadow-xs hover:border-blue-400 transition-all"
+            className="group relative rounded-lg overflow-hidden border border-blue-200/70 bg-slate-50 cursor-pointer shadow-xs hover:border-blue-400 transition-all"
           >
             <img 
               src={financialPipeline.debtBurdenImage} 
@@ -122,7 +122,7 @@ export default function ProjectTwoFinance() {
           
           {/* Problem */}
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-blue-800 mb-1">
               Data Quality Challenge in Statutory Filings
             </h3>
             <p>
@@ -132,7 +132,7 @@ export default function ProjectTwoFinance() {
 
           {/* Solution & Completed Implementation */}
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-blue-800 mb-1">
               Completed Data Pipeline & Statistical Architecture
             </h3>
             <p>
@@ -141,8 +141,8 @@ export default function ProjectTwoFinance() {
           </div>
 
           {/* The Financial Distribution Story */}
-          <div className="bg-slate-50 rounded-lg p-4 border border-slate-200/80 space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-800 flex items-center gap-1.5">
+          <div className="bg-gradient-to-br from-blue-50/60 to-indigo-50/30 rounded-lg p-4 border border-blue-200/80 space-y-3 shadow-2xs">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-blue-900 flex items-center gap-1.5">
               <BarChart3 className="w-4 h-4 text-blue-600" />
               <span>Statistical Distribution & The Anomaly Detection Story</span>
             </h4>
@@ -152,15 +152,15 @@ export default function ProjectTwoFinance() {
             </p>
 
             <div className="grid grid-cols-3 gap-2 text-center text-xs py-1">
-              <div className="bg-white p-2 rounded border border-slate-200">
-                <div className="font-bold text-emerald-700 text-sm font-mono">35,697</div>
-                <div className="text-[10px] text-slate-500">Profitable Firms (78.6%)</div>
+              <div className="bg-emerald-50/80 p-2 rounded border border-emerald-200/80 shadow-2xs">
+                <div className="font-bold text-emerald-800 text-sm font-mono">35,697</div>
+                <div className="text-[10px] text-emerald-700">Profitable Firms (78.6%)</div>
               </div>
-              <div className="bg-white p-2 rounded border border-slate-200">
-                <div className="font-bold text-rose-700 text-sm font-mono">12,119</div>
-                <div className="text-[10px] text-slate-500">Loss-Making Firms (26.7%)</div>
+              <div className="bg-rose-50/80 p-2 rounded border border-rose-200/80 shadow-2xs">
+                <div className="font-bold text-rose-800 text-sm font-mono">12,119</div>
+                <div className="text-[10px] text-rose-700">Loss-Making Firms (26.7%)</div>
               </div>
-              <div className="bg-white p-2 rounded border border-slate-200">
+              <div className="bg-white p-2 rounded border border-slate-200 shadow-2xs">
                 <div className="font-bold text-slate-700 text-sm font-mono">252</div>
                 <div className="text-[10px] text-slate-500">Exact Breakeven (0.6%)</div>
               </div>
@@ -183,18 +183,18 @@ export default function ProjectTwoFinance() {
           </div>
 
           {/* Current Status Note */}
-          <div className="bg-amber-50/60 p-3 rounded-lg border border-amber-200/60 text-xs text-amber-900">
-            <strong>Development Roadmap:</strong> The financial data cleansing, schema pruning, ratio calculation, and statistical anomaly layers are fully completed. Predictive AI/ML modeling (automated explanation synthesis) is the planned next milestone.
+          <div className="bg-amber-50/80 p-3 rounded-lg border border-amber-200/80 text-xs text-amber-950 shadow-2xs">
+            <strong className="text-amber-900">Development Roadmap:</strong> The financial data cleansing, schema pruning, ratio calculation, and statistical anomaly layers are fully completed. Predictive AI/ML modeling (automated explanation synthesis) is the planned next milestone.
           </div>
 
           {/* Technologies */}
           <div className="flex flex-wrap items-center gap-2 pt-1 text-xs">
-            <span className="text-slate-500 font-semibold uppercase text-[11px]">Technologies Used:</span>
-            <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">Python (Pandas, NumPy)</span>
-            <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">MySQL</span>
-            <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">Statistical Modeling</span>
-            <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">IQR Anomaly Detection</span>
-            <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-700 font-medium">Matplotlib & Seaborn</span>
+            <span className="text-blue-800/80 font-semibold uppercase text-[11px]">Technologies Used:</span>
+            <span className="px-2 py-0.5 rounded bg-blue-50 text-blue-900 font-medium border border-blue-200/70">Python (Pandas, NumPy)</span>
+            <span className="px-2 py-0.5 rounded bg-blue-50 text-blue-900 font-medium border border-blue-200/70">MySQL</span>
+            <span className="px-2 py-0.5 rounded bg-blue-50 text-blue-900 font-medium border border-blue-200/70">Statistical Modeling</span>
+            <span className="px-2 py-0.5 rounded bg-blue-50 text-blue-900 font-medium border border-blue-200/70">IQR Anomaly Detection</span>
+            <span className="px-2 py-0.5 rounded bg-blue-50 text-blue-900 font-medium border border-blue-200/70">Matplotlib & Seaborn</span>
           </div>
 
         </div>

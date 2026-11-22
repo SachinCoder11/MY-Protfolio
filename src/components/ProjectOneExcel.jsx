@@ -26,7 +26,7 @@ export default function ProjectOneExcel() {
         onClose={() => setModalOpen(false)}
         imageSrc={globalTrade.previewImage}
         imageAlt="Executive Excel Dashboard Preview"
-        title="Global Trade Analytics — Audited 11-Sheet Executive Excel Model"
+        title="Global Trade Analytics — Audited 10-Sheet Executive Excel Model"
       />
 
       {/* Project Header & Badge */}
@@ -84,7 +84,7 @@ export default function ProjectOneExcel() {
         <div className="flex items-start gap-2">
           <Info className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
           <span>
-            <strong className="text-emerald-900">Drive Viewing Note:</strong> When inspecting in Google Drive web preview, use the <strong>worksheet tabs along the bottom bar</strong> to switch sheets. Download the file to open natively in Microsoft Excel with interactive formulas and VBA macros.
+            <strong className="text-emerald-900">Drive Viewing Note:</strong> When inspecting in Google Drive web preview, use the <strong>worksheet tabs along the bottom bar</strong> to switch sheets. Download the file to open it in Microsoft Excel and inspect the linked worksheets, lookup formulas, calculations and dashboard.
           </span>
         </div>
         <a 
@@ -98,10 +98,10 @@ export default function ProjectOneExcel() {
       </div>
 
       {/* Main Grid: Visual Screenshot Preview & Analytical Story */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div className="space-y-6">
         
         {/* Genuine Screenshot Preview */}
-        <div className="lg:col-span-5 space-y-2">
+        <div className="w-full max-w-5xl mx-auto space-y-2">
           <div 
             onClick={() => setModalOpen(true)}
             className="group relative rounded-lg overflow-hidden border border-emerald-200/70 bg-slate-50 cursor-pointer shadow-xs hover:border-emerald-400 transition-all"
@@ -109,7 +109,7 @@ export default function ProjectOneExcel() {
             <img 
               src={globalTrade.previewImage} 
               alt="Global Trade Analytics Dashboard Preview" 
-              className="w-full h-auto object-cover group-hover:scale-102 transition-transform duration-300"
+              className="w-full max-h-[360px] object-contain bg-slate-50 group-hover:scale-[1.01] transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/30 transition-colors flex items-center justify-center">
               <span className="opacity-0 group-hover:opacity-100 px-3 py-1.5 bg-slate-900/90 text-white text-xs font-semibold rounded-md flex items-center gap-1.5 transition-opacity shadow">
@@ -124,7 +124,7 @@ export default function ProjectOneExcel() {
         </div>
 
         {/* Concise Explanation */}
-        <div className="lg:col-span-7 space-y-5 text-sm text-slate-700 leading-relaxed">
+        <div className="space-y-5 text-sm text-slate-700 leading-relaxed">
           
           {/* Problem */}
           <div>
@@ -132,7 +132,7 @@ export default function ProjectOneExcel() {
               Business Problem & Data Flaw
             </h3>
             <p>
-              Fragmented international logistics records obscured regional profitability, while an automated ETL ingestion bug misclassified the North America destination region code <strong className="font-mono text-slate-900">"NA"</strong> as a null/missing value (<strong className="font-mono text-rose-600">#N/A</strong>). This silently dropped <strong className="text-slate-900 font-semibold">$86,214.30 across 87 orders</strong> from executive reporting.
+              This case study models an ETL ingestion defect that misclassified the North America region code <strong className="font-mono text-slate-900">"NA"</strong> as a missing value (<strong className="font-mono text-rose-600">#N/A</strong>), hiding <strong className="text-slate-900 font-semibold">$86,214.30 across 87 orders</strong> from the executive view.
             </p>
           </div>
 
@@ -142,7 +142,7 @@ export default function ProjectOneExcel() {
               What Was Implemented in Excel
             </h3>
             <p>
-              Engineered a complete relational Excel workbook across <strong className="text-slate-900 font-semibold">11 linked worksheets</strong> analyzing 500 commercial transactions ($474,704.62 total sales, 28.14% operating margin). Sourced from an immutable baseline sheet (<strong className="font-mono text-xs text-slate-800">02_Raw_Trade_Data</strong>), normalized text, linked master dimension tables via <strong className="text-emerald-800 font-semibold">11,000+ dynamic formula cells</strong> (INDEX/MATCH, SUMIFS, AVERAGEIFS, XLOOKUP, tiered pricing logic), and remediated the NA bug without data loss.
+              Engineered a complete relational Excel workbook across <strong className="text-slate-900 font-semibold">10 linked worksheets</strong> analyzing 500 commercial transactions ($474,704.62 total sales, 28.14% operating margin). Sourced from an immutable baseline sheet (<strong className="font-mono text-xs text-slate-800">02_Raw_Trade_Data</strong>), normalized text, linked master dimension tables via <strong className="text-emerald-800 font-semibold">11,000+ dynamic formula cells</strong> (INDEX/MATCH, SUMIFS, AVERAGEIFS, XLOOKUP, tiered pricing logic), and remediated the NA bug without data loss.
             </p>
           </div>
 
@@ -159,7 +159,7 @@ export default function ProjectOneExcel() {
               </li>
               <li className="flex items-start gap-1.5">
                 <span className="text-emerald-600 font-bold">•</span>
-                <span><strong>$86,214.30 Rescued:</strong> Restored 87 North American orders from null misclassification.</span>
+                <span><strong>$86,214.30 Reconciled:</strong> Restored 87 North American orders in the modeled audit.</span>
               </li>
               <li className="flex items-start gap-1.5">
                 <span className="text-emerald-600 font-bold">•</span>

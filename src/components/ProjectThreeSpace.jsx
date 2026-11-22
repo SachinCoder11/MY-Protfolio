@@ -60,10 +60,10 @@ export default function ProjectThreeSpace() {
       </div>
 
       {/* Main Grid: Visuals & Narrative */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div className="space-y-6">
         
         {/* Genuine Analysis Chart Preview */}
-        <div className="lg:col-span-5 space-y-2">
+        <div className="w-full max-w-4xl mx-auto space-y-2">
           <div 
             onClick={() => setModalOpen(true)}
             className="group relative rounded-lg overflow-hidden border border-purple-200/70 bg-slate-50 cursor-pointer shadow-xs hover:border-purple-400 transition-all"
@@ -71,7 +71,7 @@ export default function ProjectThreeSpace() {
             <img 
               src={spaceMission.analysisChartImage} 
               alt="Space Mission Sparsity & Imputation Distortion Chart" 
-              className="w-full h-auto object-cover group-hover:scale-102 transition-transform duration-300"
+              className="w-full max-h-[360px] object-contain bg-slate-50 group-hover:scale-[1.01] transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/30 transition-colors flex items-center justify-center">
               <span className="opacity-0 group-hover:opacity-100 px-3 py-1.5 bg-slate-900/90 text-white text-xs font-semibold rounded-md flex items-center gap-1.5 transition-opacity shadow">
@@ -86,7 +86,7 @@ export default function ProjectThreeSpace() {
         </div>
 
         {/* Narrative & Statistical Explanation */}
-        <div className="lg:col-span-7 space-y-5 text-sm text-slate-700 leading-relaxed">
+        <div className="space-y-5 text-sm text-slate-700 leading-relaxed">
           
           {/* Problem */}
           <div>

@@ -1,32 +1,22 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Header from './components/Header';
 import ProjectOneExcel from './components/ProjectOneExcel';
 import ProjectTwoFinance from './components/ProjectTwoFinance';
 import ProjectThreeSpace from './components/ProjectThreeSpace';
 import Footer from './components/Footer';
-import { FileSpreadsheet, Database, Rocket, Sparkles } from 'lucide-react';
+import { FileSpreadsheet, Database, Rocket, Sparkles, ArrowLeft } from 'lucide-react';
 
 export default function App() {
-  useEffect(() => {
-    // Direct project URLs use native hash links. Wait until React has mounted
-    // the project sections before scrolling to the requested section.
-    const hash = window.location.hash;
-    if (!hash) return;
-
-    const timer = window.setTimeout(() => {
-      document.getElementById(decodeURIComponent(hash.slice(1)))?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
-    }, 100);
-
-    return () => window.clearTimeout(timer);
-  }, []);
-
-  const scrollTo = (id) => {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  // Dedicated project views: ?project=excel | finance | space
+  const selectedProject = new URLSearchParams(window.location.search).get('project');
+  const projectViews = {
+    excel: { title: 'Global Trade Analytics & Data Quality Intelligence', component: <ProjectOneExcel /> },
+    finance: { title: 'Automated Financial Intelligence Pipeline', component: <ProjectTwoFinance /> },
+    space: { title: 'Space Mission Exploratory Data Analysis & Imputation Audit', component: <ProjectThreeSpace /> },
   };
+  const activeProject = projectViews[selectedProject];
+
+  const projectUrl = (key) => `/?project=${key}`;
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-600 selection:text-white flex flex-col relative overflow-hidden">
@@ -38,7 +28,17 @@ export default function App() {
 
       {/* Main Content Area */}
       <main className="relative flex-1 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 w-full space-y-8">
-        
+        {activeProject ? (
+          <div className="space-y-5">
+            <a href="/" className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors">
+              <ArrowLeft className="w-4 h-4" />
+              Back to all projects
+            </a>
+            <div className="text-xs font-semibold uppercase tracking-wider text-slate-500">Selected project</div>
+            {activeProject.component}
+          </div>
+        ) : (
+        <>
         {/* Showcase Intro Banner */}
         <div className="bg-gradient-to-br from-white via-white to-blue-50/30 rounded-xl border border-slate-200/90 p-6 sm:p-7 shadow-xs space-y-3">
           <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-200/80">
@@ -57,7 +57,7 @@ export default function App() {
           {/* Quick Jump Links with Color-Coordinated Accents */}
           <div className="pt-2 flex flex-wrap gap-2 text-xs">
             <a
-              href="#project-excel"
+              href={projectUrl("excel")}
               className="px-3 py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-100/80 text-emerald-900 border border-emerald-200/90 font-semibold transition-all flex items-center gap-1.5 shadow-2xs"
             >
               <FileSpreadsheet className="w-3.5 h-3.5 text-emerald-600" />
@@ -65,7 +65,7 @@ export default function App() {
             </a>
 
             <a
-              href="#project-finance"
+              href={projectUrl("finance")}
               className="px-3 py-1.5 rounded-lg bg-blue-50 hover:bg-blue-100/80 text-blue-900 border border-blue-200/90 font-semibold transition-all flex items-center gap-1.5 shadow-2xs"
             >
               <Database className="w-3.5 h-3.5 text-blue-600" />
@@ -73,7 +73,7 @@ export default function App() {
             </a>
 
             <a
-              href="#project-space"
+              href={projectUrl("space")}
               className="px-3 py-1.5 rounded-lg bg-purple-50 hover:bg-purple-100/80 text-purple-900 border border-purple-200/90 font-semibold transition-all flex items-center gap-1.5 shadow-2xs"
             >
               <Rocket className="w-3.5 h-3.5 text-purple-600" />
@@ -97,6 +97,8 @@ export default function App() {
           <ProjectThreeSpace />
         </section>
 
+        </>
+        )}
       </main>
 
       {/* Clean Footer */}

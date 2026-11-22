@@ -365,7 +365,7 @@ export const chatbotCatalog = [
     title: "Relational Data Systems & Business APIs",
     category: "Backend & Systems",
     tags: ["backend", "sql", "mysql", "rest api", "crud", "relational", "database", "crm", "inventory"],
-    bestFor: "Recruiters looking for proven software engineering background in relational schema integrity, CRUD API endpoints, and production business apps.",
+    bestFor: "Teams looking for proven software engineering background in relational schema integrity, CRUD API endpoints, and production business apps.",
     technologies: "MySQL, REST APIs, CRUD, Relational Constraints, PropPoints CRM, Jivan Blood Bank",
     explanation: "Demonstrates practical production experience from Showstopper Technologies maintaining schema integrity and eliminating data discrepancies."
   }

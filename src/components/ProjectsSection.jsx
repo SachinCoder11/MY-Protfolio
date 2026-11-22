@@ -28,7 +28,7 @@ export default function ProjectsSection({ onSelectDemo }) {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4 border-b border-slate-200 pb-8">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold mb-3">
-              RECRUITER PORTFOLIO AUDIT
+              TECHNICAL PORTFOLIO AUDIT
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
               Featured Verified Projects

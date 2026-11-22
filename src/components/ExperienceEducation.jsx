@@ -124,7 +124,7 @@ export default function ExperienceEducation() {
               <div className="bg-gradient-to-tr from-blue-50 to-indigo-50/60 p-5 rounded-2xl border border-blue-200/80 text-xs text-slate-700 space-y-2">
                 <div className="font-bold text-blue-900 flex items-center gap-2 text-sm">
                   <CheckCircle2 className="w-4 h-4 text-blue-600" />
-                  <span>Recruiter Verification Assurance</span>
+                  <span>Technical Verification Assurance</span>
                 </div>
                 <p className="leading-relaxed">
                   Every metric, line of code, and analytical result presented across this portfolio has been pre-audited and cross-checked directly against original local files and GitHub repositories. No fabricated metrics, mock statistics, or exaggerated claims.

@@ -32,7 +32,7 @@ export default function App() {
           </h2>
 
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-3xl">
-            This technical showcase provides recruiters direct access to the three projects listed under <strong className="text-slate-900 font-semibold">Featured Analytics Projects</strong> on my resume. Every metric, statistical finding, formula count, and code repository is audited directly against original project files.
+            This technical showcase provides direct access to the three projects listed under <strong className="text-slate-900 font-semibold">Featured Analytics Projects</strong> on my resume. Every metric, statistical finding, formula count, and code repository is audited directly against original project files.
           </p>
 
           {/* Quick Jump Links */}

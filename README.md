@@ -1,6 +1,6 @@
 # Sachin Dinesh Dumbre — AI & Data Intelligence Portfolio
 
-> **Recruiter-Ready Web Portfolio with Interactive Project Demonstrations**  
+> **Production-Ready Web Portfolio with Interactive Project Demonstrations**  
 > Candidate: **Sachin Dinesh Dumbre** | AI Professional & Data Systems Specialist  
 > Contact: Navi Mumbai, Maharashtra | +91 8855077289 | sdineshdumbre@gmail.com  
 > GitHub: [github.com/SachinCoder11](https://github.com/SachinCoder11) | LinkedIn: [linkedin.com/in/sachin-dumbre](https://linkedin.com/in/sachin-dumbre)
@@ -9,7 +9,7 @@
 
 ## 1. Executive Overview
 
-This web portfolio was built specifically as a technical follow-up for recruiters and hiring managers in **AI/ML, Data Science, Quantitative Analytics, and Software Engineering**. 
+This web portfolio was built specifically as a technical follow-up for hiring managers and engineering leaders in **AI/ML, Data Science, Quantitative Analytics, and Software Engineering**. 
 
 Unlike standard portfolios with static text and mock statistics, this platform features **functional, browser-based interactive demonstrations** backed by real data models, persistent vector stores, and audited forensic calculations sourced directly from local development codebases.
 
